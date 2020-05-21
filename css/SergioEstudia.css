@@ -1,0 +1,45 @@
+#fondoSergioEstudia{
+background-image: url("fSE2.jpg"); 
+	opacity: 95%;
+	background-repeat: repeat;
+	background-position: center;
+	position: relative;
+	background-size: cover;
+}
+#descripcion{
+  position: fixed;
+  bottom: 60%;
+  right: 35%;
+  width: 500px;
+  color: black;
+}
+#titulo{
+  position: fixed;
+  bottom: 90%;
+  right: 35%;
+  width: 500px;
+  color: black;
+}
+.estiloTitulo{
+	font-family: 'PT Sans', sans-serif;
+	font-size: xx-large;
+	font-style: normal;
+  	font-weight: 700;
+	text-align: center;
+	width: 100%;
+	color: black; 
+}
+.estiloDes{
+	font-family: 'PT Sans', sans-serif;
+	font-size: large;
+	font-style: oblique;
+	text-align: center;
+	width: 100%;
+	color: black; 
+}
+button#btnEntrar{
+	text-align: center;
+	bottom: 50%;
+	right:20;
+	left: 50%;
+}

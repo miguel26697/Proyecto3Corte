@@ -1,0 +1,26 @@
+/*general de todas las tabletas*/
+.photos {
+    height: 400px;
+    margin: 100px auto;
+    position:relative;
+}
+.photos > div  {
+    border: 8px solid;
+    border-color: black #444 #888 #ccc;
+    float: left;
+    height: 200px;
+    margin: 9px;
+    /*ocultar contenido*/
+    overflow: hidden;
+    position: relative;
+    width: 400px;
+    border-radius: 50px;
+    transition-duration: 0.8s;
+}
+.photos > div img{
+    width: 100%;
+}
+.photos > div:hover{
+    z-index: 10;/*efecto*/
+    transform:scale(2);/*agrandado*/
+}
