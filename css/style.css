@@ -1,0 +1,114 @@
+body{
+	background-image: url("fondo1.jpg"); 
+	opacity: 85%;
+	background-repeat: repeat;
+	background-position: center;
+	position: relative;
+	background-size: cover;
+
+}
+*{ 
+    margin: 0; padding: 0; font-family: 'Roboto Slab', serif;
+ }
+
+.dd-vc { 
+    
+position: relative; top: 50%; transform: translateY(-100%);
+
+}
+.dd-transition { 
+    
+    transition: all 0.1s ease;
+
+}
+.dd-shadow { 
+    box-shadow: 0 0 3px 1px rgba(0,0,0,0.3); 
+}
+
+#dragDrop {
+ width: 1000px; margin: 100px auto 0; position: relative;
+    
+}
+
+.dd-slot { 
+    float: left;
+     outline: 2px dashed rgba(54, 86, 132, 0.75); 
+     outline-offset: -15px; 
+     position: relative; 
+     pointer-events: none; 
+}
+.dd-slot-num {
+    text-align: center;
+    color: rgba(0,0,0,0.1);
+    font-size: 40px; position: 
+    absolute; 
+    width: 100%; 
+}
+
+.dd-item { 
+    position: absolute;
+    left: 0; 
+    top: 0; 
+    box-sizing: 
+    border-box;
+    padding: 10px; 
+    cursor: pointer; 
+    }
+.dd-item.dd-disabled {
+    pointer-events: none;
+     opacity: 0; 
+    }
+.dd-item.dd-selected {
+     z-index: 5;
+ }
+.dd-item-inner {
+     background-repeat: no-repeat; 
+     background-size: cover; 
+     background-position: center; 
+     width: 500%; 
+     height: 130%; 
+     position: relative; 
+     background: #fff; 
+    }
+
+*{ margin: 0px;
+	padding: 0px;
+ }
+.EstiloRQ{
+	font-family: serif;
+	font-size: xx-large;
+	text-align: center;
+	width: 100%;
+	color: white; 
+}
+
+div#fichas{
+	margin-right: 5px;
+	margin-left: 15px;
+ 	width: 1320px;
+ 	height: 270px;
+ 	background-color: blue;
+ 	opacity: 100%;
+ 	bottom: 0px;
+ 	position: absolute;
+ 	}
+div#tablero{
+	margin-top: 100px;
+	margin-right: 5px;
+	margin-left: 25px;
+ 	width: 1300px;
+ 	height: 380px;
+ 	background-color: black;
+ 	opacity: 50%;
+}
+
+.cajaContenedora{
+	text-align: center;
+	opacity: 90%;
+	color : #191919;
+	padding : 4px;
+	width : 500px;
+	height : 350px;
+	overflow : auto; 
+}
+
