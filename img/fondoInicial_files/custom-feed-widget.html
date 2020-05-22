@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<!-- saved from url=(0908)https://social-blog.wix.com/custom-feed-widget?cacheKiller=1589907026002&compId=comp-jv3vl8pr&currency=COP&dateNumberFormat=es-es&deviceType=desktop&height=592&instance=B5L2owHM2rrKAZijz4PhMiC79tceRD-Iij7O33PHSmE.eyJpbnN0YW5jZUlkIjoiMzcwYjI5OTMtZDk5MS00ZDI5LWI4ZWMtMjdiNTkzOWY0MjJlIiwiYXBwRGVmSWQiOiIxNGJjZGVkNy0wMDY2LTdjMzUtMTRkNy00NjZjYjNmMDkxMDMiLCJtZXRhU2l0ZUlkIjoiMzIzNWIyMTItODlhMi00MWY2LTk0MmItNmMzZmVjODAwMTg5Iiwic2lnbkRhdGUiOiIyMDIwLTA1LTE5VDIxOjQyOjUyLjIzOVoiLCJkZW1vTW9kZSI6ZmFsc2UsIm9yaWdpbkluc3RhbmNlSWQiOiIyNWIzMTU2My04ZWI1LTQzNWUtYWMxOC1kYjkwZGZiYjAyODciLCJhaWQiOiJkZDcyOTQ4MC01ZTFlLTRjZDQtYmMzMS1hOGI0NTY3NjllYTEiLCJiaVRva2VuIjoiMDUzZTliODEtNTAzMy0wY2RmLTJjYzctNGI4YTdmMWY0M2E3Iiwic2l0ZU93bmVySWQiOiIwOGRlNjdkNC1kMjM4LTQ2NDUtOTg1NS1kYzQyZTgyNzY3ZDAifQ&isPrimaryLanguage=true&lang=es&locale=es&pageId=c1dmp&siteRevision=38&tz=America%2FBogota&viewMode=site&viewerCompId=comp-jv3vl8pr&width=456 -->
+<html lang="es"><head dir="ltr"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script>
+(function() {
+  try {
+    var canvas = typeof document === 'object' ? window.document.createElement('canvas') : {};
+    canvas.width = canvas.height = 1;
+    window.__IS_WEBP_SUPPORTED__ = canvas.toDataURL ? canvas.toDataURL('image/webp').indexOf('image/webp') === 5 : false;
+  } catch (e) {
+    window.__IS_WEBP_SUPPORTED__ = false;
+  }
+})();
+</script>
+
+
+
+    
+
+      
+  
+  
+
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://www.wix.com/favicon.ico">
+
+
+
+
+  <script type="text/javascript">
+  (function(x,e,o,s,n){var a=window.fedops||{};a.apps=a.apps||{};a.apps[x]={startLoadTime:e&&e.now&&e.now()};try{a.sessionId=o.getItem("fedops.logger.sessionId")}catch(x){}a.sessionId=a.sessionId||"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(x){var e=s()*16|0,o=x=="x"?e:e&3|8;return o.toString(16)});window.fedops=a;var d="//frog.wix.com/fed?appName="+x+"&src=72&evid=14&session_id="+a.sessionId+"&_="+s();if(!!n&&!!n.sendBeacon){n.sendBeacon(d)}else{(new Image).src=d}})('communities-blog-custom-feed-widget',window.performance,window.localStorage,Math.random,window.navigator);
+</script>
+
+
+
+
+      
+      
+<script>
+  try {
+    if (window.parent) {
+      var msgSent = false;
+      var vars = window.location.search.replace('?', '').split('&');
+      for (var i = 0; i < vars.length; i++) {
+        var arr = vars[i].split('=');
+        if (arr[0] == 'compId') {
+          window.parent.postMessage('{"intent":"TPA2","callId":1,"type":"appIsAlive","compId":"' + arr[1] + '","deviceType":"desktop","data":{"version":"1.66.0"}}', '*')
+          msgSent = true;
+        }
+      }
+      if (!msgSent) {
+        console.info('couldn\'t find compId in', window.location);
+      }
+    }
+  } catch (e) {
+    console.error('Error posting keep alive msg', e);
+  }
+</script>
+
+      
+
+      
+        <script src="./polyfill.min.js.descarga" crossorigin=""></script>
+
+        
+    <script src="./bundle.min.js(1).descarga" crossorigin="anonymous"></script>
+    <script>
+      (function initSentry() {
+        function isDuplexerError(event) {
+          try {
+            var stackFrames = event.exception.values[0].stacktrace.frames;
+            return /@wix\/wix-duplexer-js/.test(stackFrames[stackFrames.length - 1].filename);
+          } catch (error) {
+            return false;
+          }
+        }
+
+        Sentry.init({
+          dsn: 'https://71e32b4ded27414b90a94adb4e8b4d23@sentry.wixpress.com/94',
+          beforeSend: function beforeSend(event) {
+            return isDuplexerError(event) ? null : event;
+          },
+        });
+
+        Sentry.configureScope(function(scope) {
+          var p = function(x) { return x.split('=', 2).map(decodeURIComponent); };
+          var r = function(acc, x) { acc[x[0]] = x[1]; return acc; };
+          var q = location.search.replace(/^\?/, '').split('&').map(p).reduce(r, {});
+          
+          scope.setTag('bundleName', 'custom-feed-widget');
+          scope.setTag('instanceId', '370b2993-d991-4d29-b8ec-27b5939f422e');
+          scope.setTag('viewMode', q.viewMode);
+          scope.setTag('deviceType', q.deviceType);
+          scope.setTag('locale', q.locale);
+        });
+      })();
+    </script>
+  
+        
+      
+
+      
+        <link rel="stylesheet" type="text/css" href="./css">
+<link rel="stylesheet" type="text/css" href="./languages.css">
+<link rel="stylesheet" type="text/css" href="./languages(1).css">
+<link rel="stylesheet" type="text/css" href="./custom-feed-widget.min.css">
+        
+
+<style wix-style="">
+  /* Widget styles */
+  .blog-background-color { background-color: rgba(77,77,77,0); }
+	.blog-background-color { background-color: rgba(77,77,77,0); }
+
+  /* Post styles */
+  .blog-text-color { color: rgba(77,77,77,1); }
+	.blog-text-color { color: rgba(77,77,77,1); }
+	.blog-text-border-color { border-color: rgba(77,77,77,1); }
+	.blog-text-border-color { border-color: rgba(77,77,77,1); }
+	.blog-text-background-color { background-color: rgba(77,77,77,1); }
+	.blog-text-background-color { background-color: rgba(77,77,77,1); }
+  .blog-icon-fill { fill: rgba(77,77,77,1); }
+	.blog-icon-fill { fill: rgba(77,77,77,1); }
+	.blog-icon-stroke { stroke: rgba(77,77,77,1); }
+	.blog-icon-stroke { stroke: rgba(77,77,77,1); }
+  .blog-separator-background-color { background-color: rgba(77,77,77,1); }
+	.blog-separator-background-color { background-color: rgba(77,77,77,1); }
+  .blog-inverted-separator-background-color { background-color: rgba(255,255,255,1); }
+	.blog-inverted-separator-background-color { background-color: rgba(255,255,255,1); }
+  .blog-card-background-color { background-color: rgba(255,255,255,1); }
+	.blog-card-background-color { background-color: rgba(255,255,255,1); }
+	.blog-card-fill { fill: rgba(255,255,255,1); }
+	.blog-card-fill { fill: rgba(255,255,255,1); }
+	.blog-card-stroke { stroke: rgba(255,255,255,1); }
+	.blog-card-stroke { stroke: rgba(255,255,255,1); }
+	.blog-card-color { color: rgba(255,255,255,1); }
+	.blog-card-color { color: rgba(255,255,255,1); }
+  .blog-card-border-color { border-color: rgba(3,50,203,1); }
+	.blog-card-border-color { border-color: rgba(3,50,203,1); }
+  .blog-post-title-color { color: rgba(0,14,59,1); }
+	.blog-post-title-color { color: rgba(0,14,59,1); }
+  .blog-post-image-overlay-background-color { background-color: rgba(0,0,0,0.35); }
+	.blog-post-image-overlay-background-color { background-color: rgba(0,0,0,0.35); }
+
+  .blog-post-title-font { font:normal normal bold 20px/1.4em montserrat,sans-serif; font-size: 28px; line-height: normal; }
+	.blog-post-title-font { font:normal normal bold 20px/1.4em montserrat,sans-serif; line-height: normal; }
+	.blog-post-title-font { font:normal normal bold 20px/1.4em montserrat,sans-serif; line-height: normal; }
+  .blog-post-description-font { font:normal normal normal 16px/1.4em montserrat,sans-serif; font-size: 16px; line-height: normal; }
+	.blog-post-description-font { font:normal normal normal 16px/20px proxima-n-w01-reg,sans-serif; line-height: normal; }
+	.blog-post-description-font { font:normal normal normal 16px/20px proxima-n-w01-reg,sans-serif; line-height: normal; }
+
+  /* Button styles */
+  .blog-button-primary-text-color { color: #4D4D4D; }
+	.blog-button-primary-text-color { color: #4D4D4D; }
+	.blog-button-primary-text-background-color { background-color: #4D4D4D; }
+	.blog-button-primary-text-background-color { background-color: #4D4D4D; }
+  .blog-button-primary-icon-fill { fill: #4D4D4D; }
+	.blog-button-primary-icon-fill { fill: #4D4D4D; }
+  .blog-button-secondary-text-color { color: #FF3644; }
+	.blog-button-secondary-text-color { color: #FF3644; }
+  .blog-button-secondary-icon-fill { fill: #FF3644; }
+	.blog-button-secondary-icon-fill { fill: #FF3644; }
+  .blog-button-color { color: #FF3644; }
+	.blog-button-color { color: #FF3644; }
+	.blog-button-background-color { background-color: #FF3644; }
+	.blog-button-background-color { background-color: #FF3644; }
+	.blog-button-border-color { border-color: #FF3644; }
+	.blog-button-border-color { border-color: #FF3644; }
+	.blog-button-fill { fill: #FF3644; }
+	.blog-button-fill { fill: #FF3644; }
+	.blog-button-stroke { stroke: #FF3644; }
+	.blog-button-stroke { stroke: #FF3644; }
+  .is-desktop .blog-button-hover-color:hover { color: rgba(255,54,68,1); }
+	.is-desktop .blog-button-hover-color:hover { color: rgba(255,54,68,1); }
+	.is-desktop .blog-button-hover-fill:hover { fill: rgba(255,54,68,1); }
+	.is-desktop .blog-button-hover-fill:hover { fill: rgba(255,54,68,1); }
+  .is-desktop .blog-link-hover-color:hover { color: rgba(255,54,68,1); }
+	.is-desktop .blog-link-hover-color:hover { color: rgba(255,54,68,1); }
+	.is-desktop .blog-link-hover-fill:hover { fill: rgba(255,54,68,1); }
+	.is-desktop .blog-link-hover-fill:hover { fill: rgba(255,54,68,1); }
+  .is-desktop .blog-hover-container:hover .blog-hover-container-element-color { color: rgba(255,54,68,1); }
+	.is-desktop .blog-hover-container:hover .blog-hover-container-element-color { color: rgba(255,54,68,1); }
+	.is-desktop .blog-hover-container:hover .blog-hover-container-element-fill { fill: rgba(255,54,68,1); }
+	.is-desktop .blog-hover-container:hover .blog-hover-container-element-fill { fill: rgba(255,54,68,1); }
+  .is-desktop .blog-button-hover-after-border-color:hover::after { border-color: #FF3644; }
+	.is-desktop .blog-button-hover-after-border-color:hover::after { border-color: #FF3644; }
+  .blog-button-after-border-color::after { border-color: #FF3644; }
+	.blog-button-after-border-color::after { border-color: #FF3644; }
+
+  /* Fixed styles */
+  .blog-default-card-background-color { background-color: #4D4D4D; }
+	.blog-default-card-background-color { background-color: #4D4D4D; }
+  .blog-default-button-background-color { background-color: #FF3644; }
+	.blog-default-button-background-color { background-color: #FF3644; }
+  .blog-quote-border-color { border-color: #0332CB; }
+	.blog-quote-border-color { border-color: #0332CB; }
+</style>
+
+      
+    <style wix-style="">.Title{ font:normal normal bold 35px/1.4em montserrat,sans-serif; } .Menu{ font:normal normal normal 16px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif; } .Page-title{ font:normal normal bold 20px/1.4em montserrat,sans-serif; } .Heading-XL{ font:normal normal normal 28px/1.4em montserrat,sans-serif; } .Heading-L{ font:normal normal normal 38px/1.4em montserrat,sans-serif; } .Heading-M{ font:normal normal normal 16px/1.4em montserrat,sans-serif; } .Heading-S{ font:normal normal bold 64px/1.4em montserrat,sans-serif; } .Body-L{ font:normal normal normal 18px/1.4em montserrat,sans-serif; } .Body-M{ font:normal normal normal 16px/1.4em montserrat,sans-serif; } .Body-S{ font:normal normal normal 15px/1.4em montserrat,sans-serif; } .Body-XS{ font:normal normal normal 12px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif; } }</style><link type="text/css" rel="stylesheet" href="./css" id="wix-google-fonts"><link type="text/css" rel="stylesheet" href="./languages(2).css"><style>:focus {
+    outline: none;
+}
+
+.js-focus-visible .focus-visible:focus,
+.js-focus-visible .focus-visible:focus ~ .wixSdkShowFocusOnSibling
+{
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 1px 2px #3899EC;
+}
+</style><script src="./focus-visible.min.js.descarga" id="dynamic_script_FOCUS_VISIBLE"></script></head>
+
+    <body class="oSNla js-focus-visible">
+      
+
+      <div id="root"><div id="direction-provider-wrapper"><div dir="ltr"><div class="_2oAx1 blog-background-color is-desktop app-desktop" id="content-wrapper"><div class="cSnEi"><div></div><div><div><div class="_3sa-M _1Kzxw _3iZiL _32isZ post-list"><div><div class="_1Kzxw"><div class="tZgfA _1Kzxw"><div class="_sg9w"><div class="_1GFPu"><article class="dJBp- igE5v _2lmPI Qz_XW blog-post-description-font blog-text-color blog-card-background-color blog-card-border-color post-list-item blog-hover-container" tabindex="0" style="border-width:1px" data-hook="post-list-item"><div style="height:400px;min-height:400px" class="T-BZz"><a tabindex="-1" href="https://santipego0001.wixsite.com/sergioestudia/post/innovation-in-real-time-1" target="_top" class="blog-link-hover-color"><div class="_3RKAW _3-Hjr" data-hook="post-list-item-image"><div class="_1mvj7" style="background-image: url(&quot;https://static.wixstatic.com/media/a27d24_04d97835d0764f089afd39e35afd5439~mv2.jpg/v1/fit/w_627,h_362,al_c,q_80/file.webp&quot;); background-size: cover;" data-pin-url="https://santipego0001.wixsite.com/sergioestudia/post/innovation-in-real-time-1"></div></div></a></div><div class="_3kcJF igE5v _2lmPI Qz_XW _1Twkt"><div class="blog-post-description-font"><div class="_3CJpQ blog-post-metadata-font post-header"></div></div><a class="_1NTXA igE5v _2lmPI _2pX5u" href="https://santipego0001.wixsite.com/sergioestudia/post/innovation-in-real-time-1" target="_top"><div class="_3sZWk blog-post-title-font igE5v _2lmPI Qz_XW _2pX5u" data-hook="post-title"><h2 class="_2MNte post-title post-title__text blog-post-title-color blog-hover-container-element-color" datahook="post-title"><div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;">Física </div></h2></div><div class="-RDEl igE5v blog-post-description-font _2pX5u Qz_XW" data-hook="post-description"><div class="_1Uunh post-excerpt"><div style="overflow: hidden; text-overflow: ellipsis; -webkit-box-orient: vertical; display: -webkit-box; -webkit-line-clamp: 2;"><div class="AB7h6" data-hook="post-description">Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading. Welcome to your blog po...</div></div></div></div></a></div></article></div></div></div></div><div></div></div></div></div></div></div></div></div></div></div>
+
+      
+        <script>
+  var p = function(x) { return x.split('=', 2).map(decodeURIComponent); };
+  var r = function(acc, x) { acc[x[0]] = x[1]; return acc; };
+  var q = location.search.replace(/^\?/, '').split('&').map(p).reduce(r, {});
+  window.parent.postMessage(
+  '{"intent":"TPA2","callId":1,"type":"applicationLoadingStep","compId":"' + q.compId + '","deviceType":"' + q.deviceType + '","data":{"version":"1.94.0", "args":{"stage":"firstMeaningfulPaint", "stageNum":0}}}', '*'
+  );
+</script>
+
+      
+
+      
+        <script>
+  window.wixTpaWindowResize = {
+    elSelector: '#content-wrapper',
+    enableViewportFix: false,
+  };
+</script>
+<script>!function(){"use strict";!function(e){var n=e.wixTpaWindowResize;if(n){if(!n.elSelector)return console.error("Aborting window resize handler: you must specify a css selector");var i,t=decodeURIComponent(e.location.search).split("&").reduce(function(e,n){var i=n.split("=");return e[i[0]]=i[1],e},{}),o=320,r=n.elSelector,a=n.interval||160,s=n.minHeight||null,c=n.disableOnMobile||!1,l=n.enableViewportFix||!1,d="mobile"===t.deviceType,u=["editor","preview"].indexOf(t.viewMode)>-1,h=n.onInit||function(){},f=!1!==n.listenOnInit,v=!0===n.log;d&&c||(f&&g(),h({startListening:g,stopListening:m}))}function p(e){v&&console.log("window-resize-handler ",e)}function w(n){var i=n.scrollHeight*(d&&l?o/(u?o:function(){var n=!1;if(void 0!==e.orientation)n=90===e.orientation||-90===e.orientation;else{var i=e.matchMedia("(orientation: landscape)");n=!(!i||!0!==i.matches)}return n}()?Math.max(e.screen.width,e.screen.height):e.screen.width):1);return s?Math.max(i,s):i}function g(){var n=0;i=e.setInterval(function(){var i=e.document.querySelector(r);if(i){var t=w(i);n===t&&e.innerHeight===t||(n=t,function(n){e.Wix?(p("window.Wix.setHeight"),e.Wix.setHeight(n)):(p("window.parent.postMessage"),e.parent.postMessage('{"intent":"TPA2","callId":1,"type":"heightChanged","compId":"'+e.name+'","deviceType":"desktop","data":{"version":"1.66.0", "args":{"height":"'+n+'", "overflow":"false"}}}',"*"))}(t))}},a)}function m(){e.clearInterval(i)}}(window)}();
+</script>
+
+
+        <script src="./wix-private.min.js.descarga" crossorigin=""></script>
+
+
+        <script src="./react.production.min.js(1).descarga" crossorigin=""></script>
+<script src="./react-dom.production.min.js(1).descarga" crossorigin=""></script>
+
+        <script src="./lodash.min.js.descarga" crossorigin=""></script>
+
+
+        <script src="./ReactPlayer.js.descarga" crossorigin=""></script>
+
+
+        <script src="./custom-feed-widget.bundle.min.js.descarga" crossorigin="" defer=""></script>
+
+        
+
+        <script>
+          window.__INITIAL_STATE__ = {"appData":{"_id":"370b2993-d991-4d29-b8ec-27b5939f422e","label":"Welcome to Your Blog","menuLabel":"All Posts","description":"Review the posts below for some great tips. To edit this header go to Settings \u003E Categories.","language":"es","cover":{"original_file_name":"a27d24_85296a50517f45428acb01b9c4911ba1~mv2_d_3992_1513_s_2.jpg","file_name":"a27d24_85296a50517f45428acb01b9c4911ba1~mv2_d_3992_1513_s_2.jpg","width":3992,"height":1513},"overlayColor":{"color":"#ffffff","opacity":0.35},"backgroundColor":{"color":"#FFFFFF","opacity":1},"coverType":"image","textColor":{"color":"#000000","opacity":1},"postPageEnabled":true,"sendEmailsToSiteSubscribers":false,"sendEmailsToSiteMembers":true},"appSettings":{"colorPresets":[{"name":"color_1","value":"#FFFFFF","reference":"white\u002Fblack"},{"name":"color_2","value":"#000000","reference":"black\u002Fwhite"},{"name":"color_3","value":"#ED1C24","reference":"primery-1"},{"name":"color_4","value":"#0088CB","reference":"primery-2"},{"name":"color_5","value":"#FFCB05","reference":"primery-3"},{"name":"color_11","value":"#4D4D4D","reference":"color-1"},{"name":"color_12","value":"#80807E","reference":"color-2"},{"name":"color_13","value":"#C7C7C7","reference":"color-3"},{"name":"color_14","value":"#E6E4E4","reference":"color-4"},{"name":"color_15","value":"#FFFFFF","reference":"color-5"},{"name":"color_16","value":"#801119","reference":"color-6"},{"name":"color_17","value":"#B31B25","reference":"color-7"},{"name":"color_18","value":"#FF3644","reference":"color-8"},{"name":"color_19","value":"#FA6B75","reference":"color-9"},{"name":"color_20","value":"#FFA1A5","reference":"color-10"},{"name":"color_21","value":"#000E3B","reference":"color-11"},{"name":"color_22","value":"#001E80","reference":"color-12"},{"name":"color_23","value":"#0332CB","reference":"color-13"},{"name":"color_24","value":"#83A8F0","reference":"color-14"},{"name":"color_25","value":"#CFDEFC","reference":"color-15"},{"name":"color_26","value":"#B39E3A","reference":"color-16"},{"name":"color_27","value":"#E6CB4B","reference":"color-17"},{"name":"color_28","value":"#FADD52","reference":"color-18"},{"name":"color_29","value":"#FFEEA6","reference":"color-19"},{"name":"color_30","value":"#FFF9DE","reference":"color-20"},{"name":"color_31","value":"#3A4D29","reference":"color-21"},{"name":"color_32","value":"#618044","reference":"color-22"},{"name":"color_33","value":"#9BCB6C","reference":"color-23"},{"name":"color_34","value":"#CAE5AF","reference":"color-24"},{"name":"color_35","value":"#E5FAD1","reference":"color-25"}],"textPresets":{"Title":{"editorKey":"font_0","lineHeight":"1.4em","style":"normal","weight":"bold","size":"35px","fontFamily":"montserrat","value":"font:normal normal bold 35px\u002F1.4em montserrat,sans-serif;"},"Menu":{"editorKey":"font_1","lineHeight":"1.4em","style":"normal","weight":"normal","size":"16px","fontFamily":"din-next-w01-light","value":"font:normal normal normal 16px\u002F1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;"},"Page-title":{"editorKey":"font_2","lineHeight":"1.4em","style":"normal","weight":"bold","size":"20px","fontFamily":"montserrat","value":"font:normal normal bold 20px\u002F1.4em montserrat,sans-serif;"},"Heading-XL":{"editorKey":"font_3","lineHeight":"1.4em","style":"normal","weight":"normal","size":"28px","fontFamily":"montserrat","value":"font:normal normal normal 28px\u002F1.4em montserrat,sans-serif;"},"Heading-L":{"editorKey":"font_4","lineHeight":"1.4em","style":"normal","weight":"normal","size":"38px","fontFamily":"montserrat","value":"font:normal normal normal 38px\u002F1.4em montserrat,sans-serif;"},"Heading-M":{"editorKey":"font_5","lineHeight":"1.4em","style":"normal","weight":"normal","size":"16px","fontFamily":"montserrat","value":"font:normal normal normal 16px\u002F1.4em montserrat,sans-serif;"},"Heading-S":{"editorKey":"font_6","lineHeight":"1.4em","style":"normal","weight":"bold","size":"64px","fontFamily":"montserrat","value":"font:normal normal bold 64px\u002F1.4em montserrat,sans-serif;"},"Body-L":{"editorKey":"font_7","lineHeight":"1.4em","style":"normal","weight":"normal","size":"18px","fontFamily":"montserrat","value":"font:normal normal normal 18px\u002F1.4em montserrat,sans-serif;"},"Body-M":{"editorKey":"font_8","lineHeight":"1.4em","style":"normal","weight":"normal","size":"16px","fontFamily":"montserrat","value":"font:normal normal normal 16px\u002F1.4em montserrat,sans-serif;"},"Body-S":{"editorKey":"font_9","lineHeight":"1.4em","style":"normal","weight":"normal","size":"15px","fontFamily":"montserrat","value":"font:normal normal normal 15px\u002F1.4em montserrat,sans-serif;"},"Body-XS":{"editorKey":"font_10","lineHeight":"1.4em","style":"normal","weight":"normal","size":"12px","fontFamily":"din-next-w01-light","value":"font:normal normal normal 12px\u002F1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif;"}},"updatedAt":1589924650404,"style":{"colors":{"post-backgroundColor":{"themeName":"color-5","value":"rgba(255,255,255,1)"},"post-borderColor":{"themeName":"color-13","value":"rgba(3,50,203,1)"},"post-descriptionColo-textOnImager":{"value":"rgba(255,255,255,1)"},"post-descriptionColor":{"themeName":"color-1","value":"rgba(77,77,77,1)"},"post-descriptionColor-standard":{"themeName":"color-1","value":"rgba(77,77,77,1)"},"post-hoverColor":{"themeName":"color-8","value":"rgba(255,54,68,1)"},"post-hoverColor-standard":{"themeName":"color-8","value":"rgba(255,54,68,1)"},"post-imageOverlayColor":{"value":"rgba(0,0,0,0.35)"},"post-titleColo-textOnImager":{"value":"rgba(255,255,255,1)"},"post-titleColor":{"themeName":"color-11","value":"rgba(0,14,59,1)"},"post-titleColor-standard":{"themeName":"color-11","value":"rgba(0,14,59,1)"},"widget-backgroundColor":{"themeName":"color-1","value":"rgba(77,77,77,0)"}},"numbers":{"list-layoutId":7,"list-numberOfPosts":1,"post-borderWidth":1},"booleans":{"blog-isAuthorNameEnabled":false,"blog-isCommentCountEnabled":false,"blog-isLikeCountEnabled":false,"blog-isPostDateEnabled":false,"blog-isViewCountEnabled":false,"blog-isPostListFullWidthEnabled":true,"widget-isCustomFeedFeaturedPost":false},"fonts":{"ignored-as-color-picker-does-not-support-info-text":{"family":"montserrat","displayName":"Page Title","style":{"bold":true,"italic":false,"underline":false},"size":20,"preset":"Page-title","editorKey":"font_2","fontStyleParam":true,"value":"font:normal normal bold 20px\u002F1.4em montserrat,sans-serif;"},"post-descriptionFont":{"family":"proxima-n-w01-reg","style":{"bold":false,"italic":false,"underline":false},"size":16,"preset":"Custom","editorKey":"font_8","fontStyleParam":true,"value":"font:normal normal normal 16px\u002F20px proxima-n-w01-reg,sans-serif;","displayName":"Paragraph 2"},"post-descriptionFont-standard":{"family":"proxima-n-w01-reg","displayName":"Paragraph 2","style":{"bold":false,"italic":false,"underline":false},"size":16,"preset":"Custom","editorKey":"font_8","fontStyleParam":true,"value":"font:normal normal normal 16px\u002F20px proxima-n-w01-reg,sans-serif;"},"post-descriptionFont-textOnImage":{"family":"proxima-n-w01-reg","displayName":"Paragraph 2","style":{"bold":false,"italic":false,"underline":false},"size":16,"preset":"Custom","editorKey":"font_8","fontStyleParam":true,"value":"font:normal normal normal 16px\u002F20px proxima-n-w01-reg,sans-serif;"},"post-titleFont":{"family":"montserrat","style":{"bold":true,"italic":false,"underline":false},"size":20,"preset":"Page-title","editorKey":"font_2","fontStyleParam":true,"displayName":"Heading 2","value":"font:normal normal bold 20px\u002F1.4em montserrat,sans-serif;"},"post-titleFont-standard":{"family":"montserrat","displayName":"Heading 2","style":{"bold":true,"italic":false,"underline":false},"size":20,"preset":"Page-title","editorKey":"font_2","fontStyleParam":true,"value":"font:normal normal bold 20px\u002F1.4em montserrat,sans-serif;"},"post-titleFont-textOnImage":{"family":"proxima-n-w01-reg","displayName":"Page Title","style":{"bold":false,"italic":false,"underline":false},"size":28,"preset":"Custom","editorKey":"font_2","fontStyleParam":true,"value":"font:normal normal normal 28px\u002F35px proxima-n-w01-reg,sans-serif;"}},"googleFontsCssUrl":"\u002F\u002Ffonts.googleapis.com\u002Fcss?family=Montserrat:n,b,i,bi|&subset=latin,arabic,latin","uploadFontFaces":"","cssUrls":["\u002F\u002Fstatic.parastorage.com\u002Fservices\u002Fsanta-resources\u002Fresources\u002Fviewer\u002Fuser-site-fonts\u002Fv5\u002Flanguages.css","\u002F\u002Fstatic.parastorage.com\u002Fservices\u002Fsanta-resources\u002Fresources\u002Fviewer\u002Fuser-site-fonts\u002Fv7\u002Flanguages.css"]},"custom":{"widget-categoryId":"5e7be3a58a4b330017f55bc6"}},"commonSettings":{},"auth":{"currentUser":null,"isAuthenticated":false,"isAuthenticating":false},"communitiesContext":{"14cc59bc-f0b7-15b8-e1c7-89ce41d0e0c9":{"isInstalled":false}},"experiments":{"se_newBlogQuickMigration":"new","specs.wixBlog.UseRpcMemberAreaClient":"true","specs.wixBlog.ImportFromWordPress":"true","specs.wixBlog.StaticTextToolbar":"false","specs.wixBlog.ImportFromWordPressInsideMenu":"false","specs.media.MediaManager3":"true","specs.wixBlog.CollectMetrics":"false","specs.wixBlog.MapOldLayoutsToProGallery":"false","specs.wixBlog.ProvisioningModal":"true","specs.wixBlog.ProGalleryDescriptionToggle":"false","specs.wixBlog.BMComposerSidebar":"true","specs.wixBlog.FetchCurrentUser":"true","specs.wixBlog.BMNewTableMultiselect":"true","specs.wixBlog.MoveToTrash":"true","specs.wixBlog.MobileLayoutUpdatedStyle":"true","specs.wixBlog.PostPageMigration":"true","specs.wixBlog.NextProdOOI":"false","com.wixpress.communities.blog.subscription.experiments.AutoSubscribeToBlogNotifications":"true","specs.wixBlog.UsePrecomputedPostFields":"true","specs.wixBlog.BMNewSidebar":"true","specs.wixBlog.UseNextRCE":"true","specs.wixBlog.ValidateViewMode":"false","specs.wixBlog.RCELineSize":"true","specs.wixBlog.RceViewerAnchors":"false","specs.wixBlog.RceExpandImage":"true","specs.wixBlog.PinterestToggle":"true","se_santaMembers":"new","specs.wixBlog.ToggleAuthorBadge":"true","specs.wixBlog.ErrorModal":"true","specs.wixBlog.DefaultMobileLayoutSideBySide":"true","specs.wixBlog.UseDuplexerNewUrl":"true","specs.wixBlog.BMShareAfterPublishPostAction":"true","specs.wixBlog.BMNewTableLayout":"true","specs.wixBlog.RemoveEureka":"true","specs.wixBlog.UseRceTruncateContentService":"false","specs.wixBlog.ToggleEmailsForSiteMembers":"true","specs.wixBlog.MoveToTrashOnPostDeletion":"true","specs.wixBlog.TogglePostTitle":"true","specs.blogImporter.EnableRollbackOfMigrationsBM":"false","specs.wixBlog.CreateOfflineUser":"true","specs.wixBlog.SendEmailsToSiteSubscribersInBM":"true","specs.wixBlog.BlogFeedProGalleryLayouts":"true","specs.wixBlog.MembersAreaInstallV2":"true","specs.wixBlog.PassUserAspectsOnOwnerAndContributorsFetch":"false","specs.wixBlog.MobileTOILayout":"true","specs.wixBlog.VarnishCache":"true","specs.wixBlog.OnBMCloseUpdateWidgets":"false","specs.wixBlog.UseSiteQueryService":"false","specs.wixBlog.CanonicalUrl":"false","specs.wixBlog.FetchUserFromNodeApi":"true","specs.wixBlog.TestBlogOOI":"false","specs.wixBlog.BusinessManagerMoreActionsButton":"true","specs.wixBlog.BMShareAfterPublish":"false","specs.wixBlog.FixedEditorVersion":"false","specs.wixBlog.UseRelooseInBlogApp":"true","specs.wixBlog.BMExplainerTexts":"false","specs.wixBlog.ProdOOIEditor":"true","specs.wixBlog.NextProdOOIViewer":"true","specs.wixBlog.PaywallBanner ":"false","specs.wixBlog.DraftContentLogging":"true","specs.wixBlog.UseSiteMembersID":"false","specs.wixBlog.OfflinePostPageMigration":"true","specs.wixBlog.TogglePostActionsMenu":"true","specs.wixBlog.BMHireBlogWriter":"true","specs.wixBlog.RceFileUpload":"true","specs.wixBlog.NewApiUrlInEditor":"true","specs.wixBlog.NullForMemberId":"false"},"isAppLoaded":false,"isDemoMode":false,"isLoaded":{"category":{"5e7be3a58a4b330017f55bc6":true}},"isLoading":{"category":{"5e7be3a58a4b330017f55bc6":false}},"pagination":{"comments":{"entitiesByPage":{}},"posts":{"entitiesByPage":{"1":["5e7be3a58a4b330017f55bdb"]},"currentPage":1,"pageSize":1,"entityCount":4,"cursor":"2020-03-25T23:05:09.762Z"},"posts-unpublished":{"entitiesByPage":{}},"posts-published":{"entitiesByPage":{}},"posts-scheduled":{"entitiesByPage":{}},"posts-deleted":{"entitiesByPage":{}}},"posts":{"5e7be3a58a4b330017f55bdb":{"_id":"5e7be3a58a4b330017f55bdb","instanceId":"370b2993-d991-4d29-b8ec-27b5939f422e","status":"published","categoryIds":["5e7be3a58a4b330017f55bc6"],"createdDate":"2020-03-25T23:05:09.754Z","lastPublishedDate":"2020-03-26T22:15:11.133Z","slugs":["innovation-in-real-time-1"],"seoSlug":"innovation-in-real-time-1","ownerId":"5e7be3a56a95240017527d31","ownerSiteMemberId":"08de67d4-d238-4645-9855-dc42e82767d0","lastWriterId":"5e7cde2d84b7f10017cbff57","lastWriterSiteMemberId":"f46e07d5-ef9b-437a-b8d2-d32fa0f87bbd","isPinned":false,"isCommentsDisabled":false,"likeCount":0,"timeToRead":2,"viewCount":1,"totalComments":0,"lastActivityDate":"2020-03-25T23:05:09.764Z","isFeatured":false,"firstPublishedDate":"2020-03-25T23:05:09.764Z","seoShowInSearch":true,"seoShowSnippetInSearch":true,"paidPlansGroupIds":[],"tagIds":[],"title":"Física ","excerpt":"Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading. Welcome to your blog po...","coverImage":{"shouldRender":true,"imageMetadata":{"id":"a27d24_04d97835d0764f089afd39e35afd5439~mv2.jpg","original_file_name":"3efa7e_ae14e914436b4dc6a7910f45a89daaf9~mv2_d_4246_2450_s_4_2.jpg","file_name":"a27d24_04d97835d0764f089afd39e35afd5439~mv2.jpg","width":3000,"height":1731},"src":{"id":"a27d24_04d97835d0764f089afd39e35afd5439~mv2.jpg","original_file_name":"3efa7e_ae14e914436b4dc6a7910f45a89daaf9~mv2_d_4246_2450_s_4_2.jpg","file_name":"a27d24_04d97835d0764f089afd39e35afd5439~mv2.jpg","width":3000,"height":1731},"isEnabled":true,"isCustom":false,"isResolved":true},"slug":"innovation-in-real-time-1","isLiked":false,"owner":{"name":"Santiago 43","image":"https:\u002F\u002Flh3.googleusercontent.com\u002Fa-\u002FAOh14Gh-K2z81kMT8kuQYVbHZsjNMvlTI-d0DNes1K3bDA%3Ds96-c","cover":null,"siteMemberId":"08de67d4-d238-4645-9855-dc42e82767d0","isOwner":true,"isBlocked":false,"appStore":{"14bcded7-0066-7c35-14d7-466cb3f09103":{"permissions":{"role":"owner"}}},"privacyStatus":"PUBLIC","_id":"5e7be3a56a95240017527d31","slug":"santipego0001"},"isSubscribed":false,"readTime":2}},"routing":{"locationBeforeTransitions":{"pathname":"\u002Fcustom-feed-widget","search":"","hash":"","action":"POP","key":null,"query":{}}},"searchParams":{"cacheKiller":"1589907026002","compId":"comp-jv3vl8pr","currency":"COP","dateNumberFormat":"es-es","deviceType":"desktop","height":"592","instance":"B5L2owHM2rrKAZijz4PhMiC79tceRD-Iij7O33PHSmE.eyJpbnN0YW5jZUlkIjoiMzcwYjI5OTMtZDk5MS00ZDI5LWI4ZWMtMjdiNTkzOWY0MjJlIiwiYXBwRGVmSWQiOiIxNGJjZGVkNy0wMDY2LTdjMzUtMTRkNy00NjZjYjNmMDkxMDMiLCJtZXRhU2l0ZUlkIjoiMzIzNWIyMTItODlhMi00MWY2LTk0MmItNmMzZmVjODAwMTg5Iiwic2lnbkRhdGUiOiIyMDIwLTA1LTE5VDIxOjQyOjUyLjIzOVoiLCJkZW1vTW9kZSI6ZmFsc2UsIm9yaWdpbkluc3RhbmNlSWQiOiIyNWIzMTU2My04ZWI1LTQzNWUtYWMxOC1kYjkwZGZiYjAyODciLCJhaWQiOiJkZDcyOTQ4MC01ZTFlLTRjZDQtYmMzMS1hOGI0NTY3NjllYTEiLCJiaVRva2VuIjoiMDUzZTliODEtNTAzMy0wY2RmLTJjYzctNGI4YTdmMWY0M2E3Iiwic2l0ZU93bmVySWQiOiIwOGRlNjdkNC1kMjM4LTQ2NDUtOTg1NS1kYzQyZTgyNzY3ZDAifQ","isPrimaryLanguage":"true","lang":"es","locale":"es","pageId":"c1dmp","siteRevision":"38","tz":"America\u002FBogota","viewMode":"site","viewerCompId":"comp-jv3vl8pr","width":"456"},"users":{},"viewMode":"site"};
+          window.__CONFIG__ = {"bundleName":"custom-feed-widget","fedopsAppName":"communities-blog-custom-feed-widget","imageHost":"static.wixstatic.com","videoHost":"video.wixstatic.com","sectionUrl":"https:\u002F\u002Fsantipego0001.wixsite.com\u002Fsergioestudia\u002Fblog","instanceId":"370b2993-d991-4d29-b8ec-27b5939f422e","duplexer":{"url":"apps.wix.com\u002Fwix-duplexer-sockets-server","key":"8dd942aa-6255-4bb0-b004-8bd6cf2f6b35"},"isInEditor":false,"isInPreview":false,"categoryPath":"categories","useCategoryMenuLabelForMetadataTitle":false,"editorConfig":{"enableLinkify":true,"mediaToken":"JWS.eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Im5FUXljQzlOIn0.eyJpYXQiOjE1ODk5MjQ2NTAsImRhdGEiOiJ7XCJ1c2VySWRcIjpcIjRhZGQ4Y2Q3LWQwMDUtNGIyNS05MjFhLTgxOGFkMGMzYzBiNFwiLFwibWV0YXNpdGVJZFwiOlwiMzIzNWIyMTItODlhMi00MWY2LTk0MmItNmMzZmVjODAwMTg5XCJ9IiwiZXhwIjoxNTkxMTM0MjUwfQ.S9ZUqOOAPN1TGrfcDa53dmyRwvzidfmt5ae4CL01dWQ"},"isDevMode":false,"postPageSectionUrl":"https:\u002F\u002Fsantipego0001.wixsite.com\u002Fsergioestudia\u002Fpost"};
+          window.__INITIAL_I18N__ = {"localeData":{"no-posts-feed.stay-tuned":"Sigue en contacto...","view-count.label_plural":"{{count, number}} vistas","comment-count.icon-aria-label":"Recuento de comentarios","badge.owner":"Administrador","like-button.comment-is-liked":"Comentario marcado como Me Gusta","no-posts-feed.on-the-way":"Próximamente habrá aquí nuevas entradas","counter.count":"{{count, number}}","view-count.label":"{{count, number}} vista","comment-count.label_plural":"{{count, number}} comentarios","time-to-read.short-label":"{{minutes}} min.","like-button.comment-is-unliked":"Comentario no marcado como Me Gusta","like-button.total-likes":"Me Gusta.","like-button.is-unliked":"Entrada no marcada como Me Gusta","write-comment.write-a-comment":"Escribir un comentario","badge.admin":"Administrador","like-button.is-liked":"Entrada marcada como Me Gusta","video-embed.load-video":"Load video","date":"{{time, date}}","account-suspended.contact-owner":"Para ampliar información, contactar al propietario del sitio","aria-label.authors-picture":"Foto del autor","fullDate":"{{time, fullDate}}","video-embed.disabled-tooltip":"Para reproducir este video, mira esta entrada desde tu página web publicada.","badge.editor":"Editor","time-relative":"{{time, timeRelative}}","badge.writer":"Escritor","like-button.total-likes_plural":"Me Gusta.","comment-count.label":"{{count, number}} comentario","account-suspended.account-suspended":"Cuenta suspendida","time-to-read.label":"{{minutes}} Min. de lectura"},"lang":"es"};
+          window.__STATICS_VERSION__ = '1.1839.0';
+          window.__WS_CONFIG__ = {"url":"https:\u002F\u002Fforums.wix.com\u002Fwix-ws-server","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbnN0YW5jZUlkIjoiMzcwYjI5OTMtZDk5MS00ZDI5LWI4ZWMtMjdiNTkzOWY0MjJlIiwiYXBpS2V5IjoiNTQ3NmQ5MjMtYWVmMy00NjMxLWFhM2ItODg4NjBmYmUxYjg4IiwiY2hhbm5lbHMiOlt7Im1hc2siOiJpbnN0YW5jZS0zNzBiMjk5My1kOTkxLTRkMjktYjhlYy0yN2I1OTM5ZjQyMmUvYmxvZyIsInJlcXVpcmVzQXV0aCI6bnVsbCwicmVjZWl2ZU93bk1lc3NhZ2VzIjpmYWxzZX0seyJtYXNrIjoiaW5zdGFuY2UtMzcwYjI5OTMtZDk5MS00ZDI5LWI4ZWMtMjdiNTkzOWY0MjJlL2NhdGVnb3J5LShcXHcpIiwicmVxdWlyZXNBdXRoIjpudWxsLCJyZWNlaXZlT3duTWVzc2FnZXMiOmZhbHNlfSx7Im1hc2siOiJpbnN0YW5jZS0zNzBiMjk5My1kOTkxLTRkMjktYjhlYy0yN2I1OTM5ZjQyMmUvcG9zdC0oXFx3KSIsInJlcXVpcmVzQXV0aCI6bnVsbCwicmVjZWl2ZU93bk1lc3NhZ2VzIjpmYWxzZX1dLCJwcmVzZW5jZURhdGEiOnsibmFtZSI6ImFub255bW91cyJ9LCJpYXQiOjE1ODk5MjQ2NTB9.DmamzSEYsiiRVOIJP431wAtKAiyyZ7g2hYQtQyli5kk","communityToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbnN0YW5jZUlkIjoiMzcwYjI5OTMtZDk5MS00ZDI5LWI4ZWMtMjdiNTkzOWY0MjJlIiwiYXBpS2V5IjoiYzhmZWZlZDctNjVmNi00Mzc4LWJiZDQtMjAzZTI1NmUzNmIwIiwiY2hhbm5lbHMiOlt7Im1hc2siOiJjb21tdW5pdHktdW5kZWZpbmVkIiwicmVxdWlyZXNBdXRoIjpudWxsLCJyZWNlaXZlT3duTWVzc2FnZXMiOmZhbHNlfV0sInByZXNlbmNlRGF0YSI6eyJuYW1lIjoiYW5vbnltb3VzIn0sImlhdCI6MTU4OTkyNDY1MH0.QGHnlVroHs1_uBykKn4QKoK7n0KilFdQcSPl1lME5p0"};
+          window.__LOCALE__ = "es";
+          window.__BASE_PATH__ = 'https://social-blog.wix.com';
+          window.__API_BASE_URL__ = 'https://apps.wix.com/_api/communities-blog-node-api';
+          window.__CLIENT_BASE_PATH__ = '';
+          window.__IS_DEV_MODE__ = false;
+        </script>
+      
+    
+  
+
+</body></html>
