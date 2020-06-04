@@ -118,9 +118,6 @@ public class Server extends WebSocketServer {
     public static void main(String[] args) {
         Server server = new Server();
         server.start();
-
-//        Se crean los cuatros Jugadores con <List> de tipo carta 
-        // Se imprimen las fichas de casda Jugador 
     }
 
 }
