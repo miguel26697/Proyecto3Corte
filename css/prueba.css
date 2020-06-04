@@ -1,0 +1,51 @@
+body {
+margin: 0;
+padding: 0;
+font: normal 13px arial, helvetica, sans-serif;
+background: url(../imagenes/fondo.jpg) repeat-x;
+}
+#contenedor {
+margin: 0 auto;
+width: 900px;
+}
+#cabecera {
+height: 120px;
+background: url(../imagenes/fondo1.jpg);
+}
+#cabecera h1 {
+margin: 0;
+padding: 25px;
+font: bold 50px arial, helvetica, sans-serif;
+color: white;
+}
+#menu {
+background: url(../imagenes/boton-menu.jpg);
+height: 30px;
+}
+#fondomenu {
+background: url(../imagenes/boton-menu3.jpg);
+width: 485px;
+height: 30px;
+}
+#fondomenu ul {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+#fondomenu ul li a {
+background: url(../imagenes/boton-menu.jpg);
+width: 120px;
+height: 30px;
+margin-left: 1px;
+float: left;
+text-align: center;
+line-height: 30px;
+font-size: 13px;
+color: white;
+text-decoration: none;
+display: block;
+}
+#fondomenu ul li a:hover {
+background: url(../imagenes/boton-menu2.jpg);
+color: black;
+}

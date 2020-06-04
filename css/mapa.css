@@ -1,0 +1,37 @@
+#mapa{
+	width: 500px;
+	height:500px;
+	margin-left: 600px;	
+	float: right;
+}
+.lugares{
+	font-family: 'PT Sans', sans-serif;
+	font-size: large;
+	font-style: normal;
+  	font-weight: 500;
+	text-align: left;
+	width: 30%;
+	color: white;
+	float: left;
+	margin-top: 10%;
+	margin-left: 5%;
+	position: absolute;
+
+}
+#textoMapa{
+	font-family: 'PT Sans', sans-serif;
+	font-size: xx-large;
+	font-style: normal;
+  	font-weight: 700;
+	text-align: center;
+	color: white;
+	margin-left: 30%;
+}
+#fondoMapa{
+	background-color: #270B9B;
+	opacity: 100%;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin-right: 0%;
+}
