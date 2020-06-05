@@ -1,13 +1,9 @@
 package Controlador;
 
-
 import com.google.gson.Gson;
-
 import java.net.InetSocketAddress;
 import java.util.ArrayList;
-
 import java.util.List;
-
 import modelo.Cliente;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
@@ -16,10 +12,7 @@ import org.json.JSONObject;
 
 public class Server extends WebSocketServer {
 
-    private static List<Cliente> clients = new ArrayList<>(4);
-    String usuario[];
-    int cont = 1;
-    //  String tablero[];
+    private static List<Cliente> clients = new ArrayList<>();
 
     public Server() {
         super(new InetSocketAddress(30001));
@@ -28,34 +21,28 @@ public class Server extends WebSocketServer {
     @Override
     public void onOpen(WebSocket conn, ClientHandshake handshake) {
         String message = "";
-        if (clients.size() >= 4) {
-            message = "{\"tipo\":\"cola\"}";
-            conn.send(message);
-        } else {
-            message = "{\"tipo\":\"conectado\"}";
-            conn.send(message);
-
-            System.out.println("New client connected: " + conn.getRemoteSocketAddress() + " hash " + conn.getRemoteSocketAddress().hashCode());
-            Cliente cliente = new Cliente();
-            cliente.setConn(conn);
-            cliente.setHash(conn.getRemoteSocketAddress().hashCode());
-            String object = "{\"tipo\":\"hash\",\"hash\":\"" + cliente.getHash() + "\",\"conectados\":[";
-            for (int i = 0; i < clients.size(); i++) {
-                object += "{\"usuario\": \"" + clients.get(i).getNombre() + "\"}";
-                if (i < clients.size() - 1) {
-                    object += ",";
-                }
+        message = "{\"tipo\":\"conectado\"}";
+        conn.send(message);
+        System.out.println("New client connected: " + conn.getRemoteSocketAddress() + " hash " + conn.getRemoteSocketAddress().hashCode());
+        Cliente cliente = new Cliente();
+        cliente.setConn(conn);
+        cliente.setHash(conn.getRemoteSocketAddress().hashCode());
+        String object = "{\"tipo\":\"hash\",\"hash\":\"" + cliente.getHash() + "\",\"conectados\":[";
+        for (int i = 0; i < clients.size(); i++) {
+            object += "{\"usuario\": \"" + clients.get(i).getNombre() + "\"}";
+            if (i < clients.size() - 1) {
+                object += ",";
             }
-            object += "]}";
-            conn.send(object);
-            clients.add(cliente);
         }
+        object += "]}";
+        conn.send(object);
+        clients.add(cliente);
 
     }
 
     @Override
     public void onMessage(WebSocket conn, String message) {
-        usuario = new String[3];
+     
         Gson gson = new Gson();
         Cliente cli = new Cliente();
         JSONObject obj = new JSONObject(message);
@@ -67,7 +54,7 @@ public class Server extends WebSocketServer {
                 conn.send(message);
                 break;
             case "nuevo":
-                cont = 1;
+   
                 for (int i = 0; i < clients.size(); i++) {
                     if (clients.get(i).getHash() == Integer.parseInt(obj.getString("hash"))) {
                         clients.get(i).setNombre(obj.getString("usuario"));
