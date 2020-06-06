@@ -42,9 +42,7 @@ public class Server extends WebSocketServer {
 
     @Override
     public void onMessage(WebSocket conn, String message) {
-     
-        Gson gson = new Gson();
-        Cliente cli = new Cliente();
+
         JSONObject obj = new JSONObject(message);
         String tipo = (String) obj.get("tipo");
         String object = "";
@@ -54,7 +52,7 @@ public class Server extends WebSocketServer {
                 conn.send(message);
                 break;
             case "nuevo":
-   
+
                 for (int i = 0; i < clients.size(); i++) {
                     if (clients.get(i).getHash() == Integer.parseInt(obj.getString("hash"))) {
                         clients.get(i).setNombre(obj.getString("usuario"));
@@ -65,9 +63,11 @@ public class Server extends WebSocketServer {
                 }
                 break;
 
-            case "cambio":
-
-                break;
+            case "salon":
+                String idsalon="";
+                idsalon= obj.getString("idsalon");
+                System.out.println(""+idsalon); 
+               break;
 
             default:
                 break;
