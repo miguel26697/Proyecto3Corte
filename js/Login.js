@@ -2,6 +2,10 @@ $("#btnEntrar").click(function () {
     window.location.assign("login.html");
 });
 
+$("#login").click(function () {
+    window.location.assign("inicio.html");
+});
+
 function registro(){
     $.ajax({
         type: "POST",
