@@ -53,3 +53,15 @@ hora_resrva time,
 tema varchar(50)
 );
 
+create table horario(
+id_horario varchar(30) primary key,
+dia varchar(100),
+hora varchar(100),
+id_salon varchar(20),
+clase varchar(30),
+foreign key (id_salon) references salones(id_salon)
+);
+
+
+insert into horario values("F101lu7-9","lunes","7:00-9:00","F101","calculo");
+Select des.ventilacion,des.num_computadores,des.proyector ,des.televisor,des.sillas,des.toma_corriente,des.tablero from descripcion as des,salones as sa where sa.id_salon = "F101" and sa.id_descripcion=des.id_descripcion
