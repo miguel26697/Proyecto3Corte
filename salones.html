@@ -36,26 +36,13 @@
 				<form class="ui fluid form">
 					<div class="ui divider"></div>
 					<div class="inline field">
-						<select id="torre" name="Torre">
-							<option value="0">Torre</option>
-							<option value="A">A</option>
-							<option value="B">B</option>
-							<option value="C">C</option>
-							<option value="D">D</option>
-							<option value="F">F</option>
-							<option value="G">G</option>
+					
+
+						<select name="torre" id="torre" onchange="cargarNiveles();">
+							<option value="">Seleccione una torre...</option>
 						</select>
-						<div class="ui left pointing red basic label">
-							Por favor ingrese la torre
-						</div>
-						<select id="nivel" name="Nivel">
-							<option value="0">Nivel</option>
-							<option value="1">1</option>
-							<option value="2">2</option>
-							<option value="3">3</option>
-							<option value="4">4</option>
-							<option value="5">5</option>
-							<option value="6">6</option>
+						<select name="nivel" id="nivel">
+							<option value="">Seleccione un nivel...</option>
 						</select>
 
 						<select id="terminacion" name="Terminacion">
@@ -72,6 +59,11 @@
 						</div>
 					</div>
 				</form>
+
+
+
+
+
 				<button>
 					<button id="btnBuscar" class="ui inverted black button">Buscar</button>
 				</button>
@@ -79,7 +71,7 @@
 				<div id="tablaSalones">
 
 					<h1>Horario del salon</h1>
-			
+
 					<table>
 						<caption>Salon </caption>
 						<tr>
@@ -147,7 +139,7 @@
 							<td>""</td>
 						</tr>
 					</table>
-		
+
 				</div>
 
 
