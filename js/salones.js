@@ -83,60 +83,88 @@
  	cargarTorres(event);
 
  });
-
- function cargarTorres() {
-    //Inicializamos el array.
-    var array = ["A","B","C","D","F"];
-    //Ordena el array alfabeticamente.
+function cargarTorres() {
+    var array = ["A", "B", "C", "D", "E","F"];
     array.sort();
-    //Pasamos a la funcion addOptions(el ID del select, las torres cargadas en el array).
-    addOptions("Torre", array);
-    cargarNiveles();
+    addOptions("torre", array);
 }
 //Función para agregar opciones a un <select>.
 function addOptions(domElement, array) {
-	var selector = document.getElementsByName(domElement)[0];
-    //Recorremos el array.
-    for (Torre in array) {
-    	var opcion = document.createElement("option");
-    	opcion.text = array[Torre];
-    	selector.add(opcion);
+    var selector = document.getElementsByName(domElement)[0];
+    for (torre in array) {
+        var opcion = document.createElement("option");
+        opcion.text = array[torre];
+        // Añadimos un value a los option para hacer mas facil escoger los pueblos
+        opcion.value = array[torre].toLowerCase()
+        selector.add(opcion);
     }
 }
-//Función para cargar los niveles al campo "select" dependiendo de la torre elegida.
-function cargarNiveles(torre) {
-    //Objeto de niveles con las torres correspondientes.
+function cargarNiveles() {
+    // Objeto de provincias con pueblos
     var listaNiveles = {
-    	A: ["1","2","3","4","5"],
-    	B: ["1","2","3","4"],
-    	C: ["1","2","3","4","5","6","7"],
-    	D: ["1","2","3","4","5","6","7"],
-    	E: ["1","2","3","4","5"],
-    	F: ["1","2","3","4","5","6","7","8","9","10"]
+      a: ["1", "2", "3", "4", "5"],
+      b: ["1", "2", "3", "4"],
+      c: ["1", "2", "3", "4", "5"],
+      d: ["1", "2", "3", "4", "5"],
+      e: ["1", "2", "3", "4", "5"],
+      f: ["1", "2", "3", "4", "5","6","7","8","9"]
     }
-    //Declaramos un array donde guardamos todos los elementos de tipo id=Torre e id=Nivel.
-    var torres = document.getElementById('Torre');
-    var niveles = document.getElementById('Nivel');
-    //Tomamos como torreSeleccionada, el valor del id Torre (var torres).
-    var torreSeleccionada = torres.value;
-    //Se limpian los niveles.
-   niveles.innerHTML = '<option value="">Seleccione un nivel...</option>';
-    //Si existe torreSeleccionada...
-    if(torreSeleccionada !== ""){
-        //Se seleccionan los niveles y se ordenan.
-        torreSeleccionada = listaNiveles[torreSeleccionada];
-        //Insertamos los pueblos mediante un FOR.
-        torreSeleccionada.forEach(function(cargarNiveles){
-        	var opcion = document.createElement('option');
-        	opcion.value= nivel;
-        	opcion.text = nivel;
-        	niveles.add(opcion);
-        	alert("hola");
-        });
+    
+    var torres = document.getElementById('torre')
+    var niveles = document.getElementById('nivel')
+    var torreSeleccionada = torres.value
+    
+    // Se limpian los pueblos
+    niveles.innerHTML = '<option value="">Seleccione un Nivel...</option>'
+    
+    if(torreSeleccionada !== ''){
+      // Se seleccionan los pueblos y se ordenan
+      torreSeleccionada = listaNiveles[torreSeleccionada]
+      torreSeleccionada.sort()
+    
+      // Insertamos los pueblos
+      torreSeleccionada.forEach(function(nivel){
+        let opcion = document.createElement('option')
+        opcion.value = nivel
+        opcion.text = nivel
+        niveles.add(opcion)
+      });
     }
-}  
-
-/*
+    
+  }
+  function cargarTerminaciones() {
+    // Objeto de provincias con pueblos
+    var listaTerminaciones = {
+      1: ["01", "02", "03", "04", "05"],
+      2: ["01", "02", "03", "04"],
+      3: ["01", "02", "03", "04", "05"],
+      4: ["01", "02", "03", "04", "05"],
+      5: ["01", "02", "03", "04", "05"],
+      6: ["01", "02", "03", "04", "05","06","07","08","09"]
+    }
+    
+    var niveles = document.getElementById('nivel')
+    var terminaciones = document.getElementById('terminacion')
+    var nivelSeleccionada = niveles.value
+    // Se limpian los pueblos
+    terminaciones.innerHTML = '<option value="">Seleccione un Nivel...</option>'
+    
+    if(nivelSeleccionada !== ''){
+      // Se seleccionan los pueblos y se ordenan
+      nivelSeleccionada = listaTerminaciones[nivelSeleccionada]
+      nivelSeleccionada.sort()
+    
+      // Insertamos los pueblos
+      torreSeleccionada.forEach(function(terminacion){
+        let opcion = document.createElement('option')
+        opcion.value = terminacion
+        opcion.text = terminacion
+        terminaciones.add(opcion)
+      });
+    }
+    
+  }
+  /*
 var texto =  document.getElementById("Terminacion").value;
  	var indiceTer = document.getElementById("Terminacion").selectedIndex ;
  	var valor = document.getElementById("Terminacion").options[1].value ;

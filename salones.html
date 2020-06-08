@@ -24,30 +24,15 @@
 				<form class="ui fluid form">
 					<div class="ui divider"></div>
 					<div class="inline field">
-						<select id="Torre" name="Torre">
-							<option value="cargarTorres();">Seleccione una torre	
+						<select id="torre" name="torre" onchange="cargarNiveles();">
+							<option value="">Seleccione una torre	
 						</select>
-						<div class="ui left pointing purple basic label">
-							Por favor ingrese la torre 
-						</div>
-						<select id="Nivel" name="Nivel">
-							<option value="cargarNiveles();">Seleccione un nivel
+						<select id="nivel" name="nivel" onchange="cargarTerminaciones();">
+							<option value="">Seleccione un nivel
 						</select>
-						<div class="ui left pointing purple basic label">
-							Por favor ingrese el nivel(piso)
-						</div>
-						<select id="Terminacion" name="Terminacion">
-							<option value="0">Terminacion</option> 
-							<option value="1">01</option> 
-							<option value="2">02</option> 
-							<option value="3">03</option>
-							<option value="4">04</option> 
-							<option value="5">05</option> 
-							<option value="6">06</option> 
+						<select id="terminacion" name="terminacion">
+							<option value="">Seleccione una terminacion
 						</select>
-						<div class="ui left pointing purple basic label">
-							Por favor ingrese la terminacion del salon
-						</div>
 					</div>
 				</form>
 				<button>
