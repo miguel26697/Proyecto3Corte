@@ -46,26 +46,21 @@
  	}
  }
  function select(){ 
- 	var ter = document.getElementById("Terminacion").selectedIndex ;
- 	var niv = document.getElementById("Nivel").selectedIndex ;
- 	var torr = document.getElementById("Torre").selectedIndex ;
- 	if (ter===0 || niv===0 || torr===0 ) {
+ 	var ter = document.getElementById("terminacion").selectedIndex ;
+ 	if (ter===0) {
  		alert("faltan argumentos");
  		$('#botones').hide();
  		$('#num_computadores').hide();$('#proyector').hide();$('#televisor').hide();
  		$('#toma_corriente').hide();$('#tablero').hide();$('#ventilacion').hide();
  	}else{
  		$('#botones').show();
+ 		mostrar_ocultar('mostrar_ocultar');
  	}
  }
  function capturaSelect(){
  	var ter = document.getElementById("Terminacion").selectedIndex ;
- 	var niv = document.getElementById("Nivel").selectedIndex ;
- 	var torr = document.getElementById("Torre").selectedIndex ;
  	var textoTer = document.getElementById("Terminacion").options[ter].text ;
- 	var textoNiv = document.getElementById("Nivel").options[niv].text ;
- 	var textoTorr = document.getElementById("Torre").options[torr].text ;
- 	alert("Terminacion:  "+textoTorr+textoNiv+textoTer);	
+ 	alert("Terminacion:  "+textoTer);	
  }
  function modificaSelect(){
  	var torr = document.getElementById("Torre").selectedIndex ;
@@ -87,6 +82,7 @@ function cargarTorres() {
     var array = ["A", "B", "C", "D", "E","F"];
     array.sort();
     addOptions("torre", array);
+
 }
 //Función para agregar opciones a un <select>.
 function addOptions(domElement, array) {
@@ -132,38 +128,7 @@ function cargarNiveles() {
     }
     
   }
-  function cargarTerminaciones() {
-    // Objeto de provincias con pueblos
-    var listaTerminaciones = {
-      1: ["01", "02", "03", "04", "05"],
-      2: ["01", "02", "03", "04"],
-      3: ["01", "02", "03", "04", "05"],
-      4: ["01", "02", "03", "04", "05"],
-      5: ["01", "02", "03", "04", "05"],
-      6: ["01", "02", "03", "04", "05","06","07","08","09"]
-    }
-    
-    var niveles = document.getElementById('nivel')
-    var terminaciones = document.getElementById('terminacion')
-    var nivelSeleccionada = niveles.value
-    // Se limpian los pueblos
-    terminaciones.innerHTML = '<option value="">Seleccione un Nivel...</option>'
-    
-    if(nivelSeleccionada !== ''){
-      // Se seleccionan los pueblos y se ordenan
-      nivelSeleccionada = listaTerminaciones[nivelSeleccionada]
-      nivelSeleccionada.sort()
-    
-      // Insertamos los pueblos
-      torreSeleccionada.forEach(function(terminacion){
-        let opcion = document.createElement('option')
-        opcion.value = terminacion
-        opcion.text = terminacion
-        terminaciones.add(opcion)
-      });
-    }
-    
-  }
+ 
   /*
 var texto =  document.getElementById("Terminacion").value;
  	var indiceTer = document.getElementById("Terminacion").selectedIndex ;
