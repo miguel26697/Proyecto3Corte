@@ -2,8 +2,11 @@ package Controlador;
 
 import com.google.gson.Gson;
 import java.net.InetSocketAddress;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JOptionPane;
 import modelo.Cliente;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
@@ -13,9 +16,14 @@ import org.json.JSONObject;
 public class Server extends WebSocketServer {
 
     private static List<Cliente> clients = new ArrayList<>();
+    conexion con = new conexion();
+    ArrayList<String> dia = new ArrayList<String>();
+    ArrayList<String> hora = new ArrayList<String>();
+    ArrayList<String> clase = new ArrayList<String>();
 
     public Server() {
         super(new InetSocketAddress(30001));
+
     }
 
     @Override
@@ -46,6 +54,7 @@ public class Server extends WebSocketServer {
         JSONObject obj = new JSONObject(message);
         String tipo = (String) obj.get("tipo");
         String object = "";
+        String ven = "", num_compu = "", pro = "", tv = "", sil = "", to_co = "", tab = "";
         switch (tipo) {
             case "ping":
                 message = "pong";
@@ -64,10 +73,106 @@ public class Server extends WebSocketServer {
                 break;
 
             case "salon":
-                String idsalon="";
-                idsalon= obj.getString("idsalon");
-                System.out.println(""+idsalon); 
-               break;
+                int cont = 0;
+                String idsalon = "";
+                idsalon = (String) obj.getString("idsalon");
+                System.out.println("" + idsalon);
+                try {
+
+                    String clave = "Select des.ventilacion,des.num_computadores,des.proyector ,"
+                            + "des.televisor,des.sillas,des.toma_corriente,des.tablero from descripcion as des,salones as sa "
+                            + "where sa.id_salon ='" + idsalon + "' and sa.id_descripcion=des.id_descripcion";
+
+                    String horario = "select dia,hora,clase from horario where id_salon='" + idsalon + "'";
+                    PreparedStatement ps, ph;
+                    ResultSet rs, rh;
+                    ps = con.conexion().prepareStatement(clave);
+                    ph = con.conexion().prepareStatement(horario);
+                    rs = ps.executeQuery();
+                    rh = ph.executeQuery();
+                    while (rh.next()) {
+
+                        dia.add(rh.getString("dia"));
+                        hora.add(rh.getString("hora"));
+                        clase.add(rh.getString("clase"));
+
+                    }
+                    if (rs.next()) {
+                        ven = rs.getString("des.ventilacion");
+                        num_compu = rs.getString("des.num_computadores");
+                        pro = rs.getString("des.proyector");
+                        tv = rs.getString("des.televisor");
+                        sil = rs.getString("des.sillas");
+                        to_co = rs.getString("des.toma_corriente");
+                        tab = rs.getString("des.tablero");
+
+                    } else {
+                        System.out.println("id no encontrado");
+                    }
+                } catch (Exception x) {
+                    System.out.println("error" + x.getMessage());
+
+                }
+                System.out.println("" + ven);
+
+                object = "{\"tipo\":\"infsalon\",\"ven\":\"" + ven + "\",\"numpc\":\"" + num_compu + "\",\"pro\":\"" + pro + "\",\"tv\":\"" + tv
+                        + "\",\"sil\":\"" + sil + "\",\"toma\":\"" + to_co + "\",\"tab\":\"" + tab + "\"}";
+                for (int i = 0; i < clients.size(); i++) {
+                    WebSocket c = (WebSocket) clients.get(i).getConn();
+                    if (c == conn) {
+                        c.send(object);
+                    }
+                }
+
+                object = "{\"tipo\":\"horario\",\"dia\":[";
+                for (int i = 0; i < dia.size(); i++) {
+                    object += "{\"dia\": \"" + dia.get(i) + "\"}";
+                    if (i < dia.size() - 1) {
+                        object += ",";
+                    }
+                }
+                object += "]}";
+                dia.clear();
+                for (int i = 0; i < clients.size(); i++) {
+                    WebSocket c = (WebSocket) clients.get(i).getConn();
+                    if (c == conn) {
+                        c.send(object);
+                    }
+                }
+                 object = "{\"tipo\":\"horario1\",\"hora\":[";
+                for (int i = 0; i < hora.size(); i++) {
+                    object += "{\"dia\": \"" + hora.get(i) + "\"}";
+                    if (i < hora.size() - 1) {
+                        object += ",";
+                    }
+                }
+                object += "]}";
+                hora.clear();
+                for (int i = 0; i < clients.size(); i++) {
+                    WebSocket c = (WebSocket) clients.get(i).getConn();
+                    if (c == conn) {
+                        c.send(object);
+                    }
+                }
+                
+                 object = "{\"tipo\":\"horario2\",\"clase\":[";
+                for (int i = 0; i < clase.size(); i++) {
+                    object += "{\"dia\": \"" + clase.get(i) + "\"}";
+                    if (i < clase.size() - 1) {
+                        object += ",";
+                    }
+                }
+                object += "]}";
+                clase.clear();
+                for (int i = 0; i < clients.size(); i++) {
+                    WebSocket c = (WebSocket) clients.get(i).getConn();
+                    if (c == conn) {
+                        c.send(object);
+                    }
+                }
+                
+
+                break;
 
             default:
                 break;

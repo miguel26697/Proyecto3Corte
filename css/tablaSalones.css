@@ -9,13 +9,14 @@
 }
 #tablaSalones h1 { 
 	font-family: arial; 
-	font-size: 2.2em; 
+	font-size: 1em; 
 	text-align: center; 
 	color: #660033; 
 }
 #tablaSalones p { 
 	font-style: italic; 
 	font-family: tahoma; 
+	font-size: 1em; 
 }
 #tablaSalones table { 
 	border: 2px solid #660066; 
@@ -26,7 +27,7 @@
 #tablaSalones th, td { 
 	border: 1px solid #660066; 
 	font-family: arial; 
-	font-size: 1.1em;
+	font-size: 1em;
     padding: 5px 10px; 
     color: #660066; }
 #tablaSalones table caption { 
