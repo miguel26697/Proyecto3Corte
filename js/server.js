@@ -125,6 +125,7 @@ function crearMatriz() {
 	console.log(clase810);
 
 
+
 	horario[0] = clase79;
 	horario[1] = clase911;
 	horario[2] = clase111;
@@ -134,14 +135,14 @@ function crearMatriz() {
 	horario[6] = clase810;
 
 	console.log(horario)
-
+	texto = "";
 	for (i = 0; i < horario.length; i++) {
 		texto += '<tr>';
 		texto += '<td> ';
 		for (j = 0; j < horario[i].length; j++) {
-			if (horario[i][j] === undefined){
+			if (horario[i][j] === undefined) {
 				texto += "<td>" + "" + "</td>";
-			}else{
+			} else {
 				texto += "<td>" + horario[i][j] + "</td>";
 			}
 		}
@@ -150,4 +151,14 @@ function crearMatriz() {
 	}
 	texto += "</table>";
 	$("#tabla").append(texto);
+
+
+	clase79 = [];
+	clase911 = [];
+	clase111 = [];
+	clase24 = [];
+	clase46 = [];
+	clase68 = [];
+	clase810 = [];
+
 }
