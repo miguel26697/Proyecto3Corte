@@ -1,21 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+	<link rel="stylesheet" type="text/css" href="css/micss.css">
+	<link rel="stylesheet" type="text/css" href="css/foro.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<title>Foro</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
-	integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
-	crossorigin="anonymous">
 </head>
+
 <body>
-	<div class="container mt-5">
-		<input type="text " id="formulario" class="from-control my-2">
-		<button class="btn btn-info mb-2" id="boton">buscar</button>
-		<ul id="resultado">
-			
-		</ul>
+	<div class="ui inverted massive navy fixed menu">
+		<div class="ui simple dropdown item">
+			Questions <i class="dropdown icon"></i>
+		</div>
+		<div class="ui simple dropdown item">
+			About <i class="dropdown icon"></i>
+		</div>
+		<div class="ui simple dropdown item">
+			Contact <i class="dropdown icon"></i>
+		</div>
+		<div class="center menu">
+			<label class="item Titulo">Segio Estudia</label>
+		</div>
 	</div>
+
+	<div class="container mt-5">
+		<input type="text " id="formulario" class="from-control my-5">
+		<button class="btn btn-info mb-2" id="boton">buscar</button>
+		<ul id="resultado"> </ul>
+	</div>
+
+	<div class="ui card" id="foro1"
+		data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'>
+			<i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'>
+			</i><i class='active icon'></i></div></div>">
+		<div class="image">
+			<img src="/images/movies/totoro-horizontal.jpg">
+		</div>
+		<div class="content">
+			<div class="header">My Neighbor Totoro</div>
+			<div class="description">
+				Two sisters move to the country with their father in order to be closer to their hospitalized mother,
+				and discover the surrounding trees are inhabited by magical spirits.
+			</div>
+		</div>
+		<div class="ui two bottom attached buttons">
+			<div class="ui button">
+				<i class="add icon"></i>
+				Queue
+			</div>
+			<div class="ui primary button">
+				<i class="play icon"></i>
+				Watch
+			</div>
+		</div>
+	</div>
+
+	<div class="ui card" id="foro2"
+	data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'>
+		<i class='active icon'></i><i class='active icon'></i><i class='active icon'></i>
+		<i class='active icon'></i><i class='active icon'></i></div></div>">
+	<div class="image" id="f2">
+		<img src="img/Totoro.jpg">
+	</div>
+	<div class="content">
+		<div class="header">Ciencias Politicas</div>
+		<div class="description">
+			En este foro encontraras diversos temas con respecto a temas sociopoliticos
+			además podras ver la preguntas de tus demas compañeros 
+		</div>
+	</div>
+		<div class="ui primary button" onclick="location.href='file:///C:/Users/Caceres/Desktop/ProyectoCorte3/Proyecto3Corte/foro_ciencias_p.html'" >
+			<i class="play icon"></i>
+			Watch
+		</div>
+</div>
+
 	<script src="js/foro.js"></script>
 </body>
+
 </html>
