@@ -124,45 +124,16 @@ public class Server extends WebSocketServer {
                     }
                 }
 
-                object = "{\"tipo\":\"horario\",\"dia\":[";
+                object = "{\"tipo\":\"horario\",\"arreglo\":[";
                 for (int i = 0; i < dia.size(); i++) {
-                    object += "{\"dia\": \"" + dia.get(i) + "\"}";
+                    object += "{\"colu\": \"" + dia.get(i) + "\",\"fila\":\"" + hora.get(i) + "\",\"clase\":\"" + clase.get(i) + "\"}";
                     if (i < dia.size() - 1) {
                         object += ",";
                     }
                 }
                 object += "]}";
                 dia.clear();
-                for (int i = 0; i < clients.size(); i++) {
-                    WebSocket c = (WebSocket) clients.get(i).getConn();
-                    if (c == conn) {
-                        c.send(object);
-                    }
-                }
-                 object = "{\"tipo\":\"horario1\",\"hora\":[";
-                for (int i = 0; i < hora.size(); i++) {
-                    object += "{\"dia\": \"" + hora.get(i) + "\"}";
-                    if (i < hora.size() - 1) {
-                        object += ",";
-                    }
-                }
-                object += "]}";
                 hora.clear();
-                for (int i = 0; i < clients.size(); i++) {
-                    WebSocket c = (WebSocket) clients.get(i).getConn();
-                    if (c == conn) {
-                        c.send(object);
-                    }
-                }
-                
-                 object = "{\"tipo\":\"horario2\",\"clase\":[";
-                for (int i = 0; i < clase.size(); i++) {
-                    object += "{\"dia\": \"" + clase.get(i) + "\"}";
-                    if (i < clase.size() - 1) {
-                        object += ",";
-                    }
-                }
-                object += "]}";
                 clase.clear();
                 for (int i = 0; i < clients.size(); i++) {
                     WebSocket c = (WebSocket) clients.get(i).getConn();
@@ -170,7 +141,7 @@ public class Server extends WebSocketServer {
                         c.send(object);
                     }
                 }
-                
+
 
                 break;
 

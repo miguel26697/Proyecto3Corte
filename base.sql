@@ -53,7 +53,7 @@ tema varchar(50)
 );
 
 create table horario(
-id_horario varchar(30) primary key,
+id_horario int auto_increment primary key,
 dia varchar(100),
 hora varchar(100),
 id_salon varchar(20),
@@ -61,11 +61,33 @@ clase varchar(30),
 foreign key (id_salon) references salones(id_salon)
 );
 
+drop table horario;
 
-insert into horario values("F101lu7-9","lunes","7:00-9:00","F101","calculo");
-insert into horario values("F101lu9-11","lunes","9:00-11:00","F101","lea");
-insert into horario values("F101lu2-4","lunes","2:00-4:00","F101","sistemas 1");
+insert into horario (dia,hora,id_salon,clase) values("1","1","F101","calculo");
+insert into horario (dia,hora,id_salon,clase)values("1","2","F101","lea");
+insert into horario (dia,hora,id_salon,clase)values("1","5","F101","sistemas 1");
+insert into horario (dia,hora,id_salon,clase)values("2","1","F101","redes");
+insert into horario (dia,hora,id_salon,clase)values("2","2","F101","fisica");
+insert into horario (dia,hora,id_salon,clase) values("2","5","F101","dibujo");
+insert into horario (dia,hora,id_salon,clase)values("3","1","F101","redes6");
+insert into horario (dia,hora,id_salon,clase)values("3","2","F101","fisica4");
+insert into horario (dia,hora,id_salon,clase) values("3","4","F101","dibujo10");
+insert into horario (dia,hora,id_salon,clase)values("4","1","F101","programacion");
+insert into horario (dia,hora,id_salon,clase)values("4","2","F101","ambiental");
+insert into horario (dia,hora,id_salon,clase) values("4","4","F101","modelacion");
+insert into horario (dia,hora,id_salon,clase)values("6","1","F101","programacion");
+insert into horario (dia,hora,id_salon,clase)values("6","2","F101","ambiental");
+insert into horario (dia,hora,id_salon,clase) values("6","4","F101","modelacion");
 
 
-Select des.ventilacion,des.num_computadores,des.proyector ,des.televisor,des.sillas,des.toma_corriente,des.tablero from descripcion as des,salones as sa where sa.id_salon = "F101" and sa.id_descripcion=des.id_descripcion
+select * from horario;
+
+
+insert into horario values("miercoles","2:00-4:00","F101","sistemas 1");
+insert into horario values("miercoles","2:00-4:00","F101","sistemas 1");
+insert into horario values("jueves","2:00-4:00","F101","sistemas 1");
+insert into horario values("jueves","2:00-4:00","F101","sistemas 1");
+
+
+Select des.ventilacion,des.num_computadores,des.proyector ,des.televisor,des.sillas,des.toma_corriente,des.tablero from descripcion as des,salones as sa where sa.id_salon = "F101" and sa.id_descripcion=des.id_descripcion;
 select dia,hora,clase from horario where id_salon= "F101";

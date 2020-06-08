@@ -1,17 +1,15 @@
-$("#btnBuscar").click(function() {
+$("#btnBuscar").click(function () {
     getSalon();
 });
 
 
 
-$("#btnDevolverse").click(function() {
+$("#btnDevolverse").click(function () {
     window.location.assign("inicio.html");
 });
 
-
-
 function cargarTorres() {
-    var array = ["A", "B", "C", "D", "E"];
+    var array = ["F", "B", "C", "D", "E"];
     array.sort();
     addOptions("torre", array);
 }
@@ -34,35 +32,33 @@ function addOptions(domElement, array) {
 function cargarNiveles() {
     // Objeto de provincias con pueblos
     var listaNiveles = {
-      a: ["1", "2", "3", "4", "5","6"],
-      b: ["Langreo", "Villaviciosa", "Oviedo", "Gijon", "Covadonga"],
-      c: ["Tui", "Cambados", "Redondella", "Porriño", "Ogrove"],
-      d: ["Dos Hermanas", "Écija", "Algeciras", "Marbella", "Sevilla"],
-      e: ["Caceres", "Badajoz", "Plasencia", "Zafra", "Merida"]
+        f: ["1", "2", "3", "4", "5", "6"],
+        b: ["Langreo", "Villaviciosa", "Oviedo", "Gijon", "Covadonga"],
+        c: ["Tui", "Cambados", "Redondella", "Porriño", "Ogrove"],
+        d: ["Dos Hermanas", "Écija", "Algeciras", "Marbella", "Sevilla"],
+        e: ["Caceres", "Badajoz", "Plasencia", "Zafra", "Merida"]
     }
-    
+
     var torres = document.getElementById('torre')
     var niveles = document.getElementById('nivel')
     var torreSeleccionada = torres.value
-    
+
     // Se limpian los pueblos
     niveles.innerHTML = '<option value="">Seleccione un Nivel...</option>'
-    
-    if(torreSeleccionada !== ''){
-      // Se seleccionan los pueblos y se ordenan
-      torreSeleccionada = listaNiveles[torreSeleccionada]
-      torreSeleccionada.sort()
-    
-      // Insertamos los pueblos
-      torreSeleccionada.forEach(function(nivel){
-        let opcion = document.createElement('option')
-        opcion.value = nivel
-        opcion.text = nivel
-        niveles.add(opcion)
-      });
+
+    if (torreSeleccionada !== '') {
+        // Se seleccionan los pueblos y se ordenan
+        torreSeleccionada = listaNiveles[torreSeleccionada]
+        torreSeleccionada.sort()
+
+        // Insertamos los pueblos
+        torreSeleccionada.forEach(function (nivel) {
+            let opcion = document.createElement('option')
+            opcion.value = nivel
+            opcion.text = nivel
+            niveles.add(opcion)
+        });
     }
-    
-  }
-  
- // Iniciar la carga de provincias solo para comprobar que funciona
+}
+// Iniciar la carga de provincias solo para comprobar que funciona
 cargarTorres();
