@@ -9,7 +9,8 @@
  	mostrar_ocultar('ventilacion');
  	$('#num_computadores').hide();$('#proyector').hide();$('#televisor').hide();
  	$('#toma_corriente').hide();$('#tablero').hide();
- 		capturaSelect();
+ 	capturaSelect();
+ 	modificaSelect();
  });
  $("#btnNum_Computadores").click(function() {
  	mostrar_ocultar('num_computadores');
@@ -66,6 +67,73 @@
  	var textoTorr = document.getElementById("Torre").options[torr].text ;
  	alert("Terminacion:  "+textoTorr+textoNiv+textoTer);	
  }
+ function modificaSelect(){
+ 	var torr = document.getElementById("Torre").selectedIndex ;
+ 	var niv = document.getElementById("Nivel").selectedIndex ;
+ 	if (torr === 2 && niv===5 || torr === 2 && niv===6  ) {
+ 		alert("no existe");
+ 	}
+ 	if (torr === 2 ) {
+ 		var textoNiv = document.getElementById("Nivel").options[5].hide;
+ 	}
+ }
+
+
+ window.addEventListener("load", function() {
+ 	cargarTorres(event);
+
+ });
+
+ function cargarTorres() {
+    //Inicializamos el array.
+    var array = ["A","B","C","D","F"];
+    //Ordena el array alfabeticamente.
+    array.sort();
+    //Pasamos a la funcion addOptions(el ID del select, las torres cargadas en el array).
+    addOptions("Torre", array);
+    cargarNiveles();
+}
+//Función para agregar opciones a un <select>.
+function addOptions(domElement, array) {
+	var selector = document.getElementsByName(domElement)[0];
+    //Recorremos el array.
+    for (Torre in array) {
+    	var opcion = document.createElement("option");
+    	opcion.text = array[Torre];
+    	selector.add(opcion);
+    }
+}
+//Función para cargar los niveles al campo "select" dependiendo de la torre elegida.
+function cargarNiveles() {
+    //Objeto de niveles con las torres correspondientes.
+    var listaNiveles = {
+    	A: ["1","2","3","4","5"],
+    	B: ["1","2","3","4"],
+    	C: ["1","2","3","4","5","6","7"],
+    	D: ["1","2","3","4","5","6","7"],
+    	E: ["1","2","3","4","5"],
+    	F: ["1","2","3","4","5","6","7","8","9","10"]
+    }
+    //Declaramos un array donde guardamos todos los elementos de tipo id=Torre e id=Nivel.
+    var torres = document.getElementById('Torre');
+    var niveles = document.getElementById('Nivel');
+    //Tomamos como torreSeleccionada, el valor del id Torre (var torres).
+    var torreSeleccionada = torres.value;
+    //Se limpian los niveles.
+   niveles.innerHTML = '<option value="">Seleccione un nivel...</option>';
+    //Si existe torreSeleccionada...
+    if(torreSeleccionada !== ""){
+        //Se seleccionan los niveles y se ordenan.
+        torreSeleccionada = listaNiveles[torreSeleccionada];
+        //Insertamos los pueblos mediante un FOR.
+        torreSeleccionada.forEach(function(Nivel){
+        	let opcion = document.createElement('option');
+        	opcion.value= Nivel;
+        	opcion.text = Nivel;
+        	niveles.add(opcion);
+        });
+    }
+}  
 /*
 var texto =  document.getElementById("Terminacion").value;
  	var indiceTer = document.getElementById("Terminacion").selectedIndex ;
@@ -75,7 +143,7 @@ var texto =  document.getElementById("Terminacion").value;
  	alert("indice"+""+indice);
  	alert("valor"+""+valor);
  	alert("textoEscogido"+""+textoEscogido);
-*/
+ 	*/
 /*alert("tex"+""+texto);
  	alert("indice"+""+indice);
  	alert("valor"+""+valor);*/
