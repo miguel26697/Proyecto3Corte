@@ -1,6 +1,5 @@
  $('#botones').hide();
  $("#btnBuscar").click(function() {
- 	
  	select();
  });
  $("#btnDevolverse").click(function() {
@@ -10,6 +9,7 @@
  	mostrar_ocultar('ventilacion');
  	$('#num_computadores').hide();$('#proyector').hide();$('#televisor').hide();
  	$('#toma_corriente').hide();$('#tablero').hide();
+ 		capturaSelect();
  });
  $("#btnNum_Computadores").click(function() {
  	mostrar_ocultar('num_computadores');
@@ -52,20 +52,30 @@
  		alert("faltan argumentos");
  		$('#botones').hide();
  		$('#num_computadores').hide();$('#proyector').hide();$('#televisor').hide();
- 	$('#toma_corriente').hide();$('#tablero').hide();$('#ventilacion').hide();
+ 		$('#toma_corriente').hide();$('#tablero').hide();$('#ventilacion').hide();
  	}else{
  		$('#botones').show();
  	}
-
- 		/*
- 	var texto ;
- 	texto = "El numero de opciones del select: " + document.getElementById("Terminacion").value;
- 	var indice = document.getElementById("Terminacion").selectedIndex ;
- 	texto += "nIndice de la opcion escogida: " + indice ;
- 	var valor = document.getElementById("Terminacion").options[1].value 
- 	texto += "nValor de la opcion escogida: " + valor ;
- 	var textoEscogido = document.getElementById("Terminacion").options[1].text 
- 	texto += "nTexto de la opcion escogida: " + textoEscogido ;
- 	alert(indice);
- 	*/
  }
+ function capturaSelect(){
+ 	var ter = document.getElementById("Terminacion").selectedIndex ;
+ 	var niv = document.getElementById("Nivel").selectedIndex ;
+ 	var torr = document.getElementById("Torre").selectedIndex ;
+ 	var textoTer = document.getElementById("Terminacion").options[ter].text ;
+ 	var textoNiv = document.getElementById("Nivel").options[niv].text ;
+ 	var textoTorr = document.getElementById("Torre").options[torr].text ;
+ 	alert("Terminacion:  "+textoTorr+textoNiv+textoTer);	
+ }
+/*
+var texto =  document.getElementById("Terminacion").value;
+ 	var indiceTer = document.getElementById("Terminacion").selectedIndex ;
+ 	var valor = document.getElementById("Terminacion").options[1].value ;
+ 	var textoEscogido = document.getElementById("Terminacion").options[indiceTer].text ;
+ 	alert("tex"+""+texto);
+ 	alert("indice"+""+indice);
+ 	alert("valor"+""+valor);
+ 	alert("textoEscogido"+""+textoEscogido);
+*/
+/*alert("tex"+""+texto);
+ 	alert("indice"+""+indice);
+ 	alert("valor"+""+valor);*/
