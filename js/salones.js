@@ -104,7 +104,7 @@ function addOptions(domElement, array) {
     }
 }
 //Función para cargar los niveles al campo "select" dependiendo de la torre elegida.
-function cargarNiveles() {
+function cargarNiveles(torre) {
     //Objeto de niveles con las torres correspondientes.
     var listaNiveles = {
     	A: ["1","2","3","4","5"],
@@ -126,14 +126,16 @@ function cargarNiveles() {
         //Se seleccionan los niveles y se ordenan.
         torreSeleccionada = listaNiveles[torreSeleccionada];
         //Insertamos los pueblos mediante un FOR.
-        torreSeleccionada.forEach(function(Nivel){
-        	let opcion = document.createElement('option');
-        	opcion.value= Nivel;
-        	opcion.text = Nivel;
+        torreSeleccionada.forEach(function(cargarNiveles){
+        	var opcion = document.createElement('option');
+        	opcion.value= nivel;
+        	opcion.text = nivel;
         	niveles.add(opcion);
+        	alert("hola");
         });
     }
 }  
+
 /*
 var texto =  document.getElementById("Terminacion").value;
  	var indiceTer = document.getElementById("Terminacion").selectedIndex ;
