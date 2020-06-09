@@ -1,0 +1,3 @@
+$("#buscar").click(function () {
+   getSalon();
+});
