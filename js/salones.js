@@ -10,7 +10,6 @@
  	$('#num_computadores').hide();$('#proyector').hide();$('#televisor').hide();
  	$('#toma_corriente').hide();$('#tablero').hide();
  	capturaSelect();
- 	modificaSelect();
  });
  $("#btnNum_Computadores").click(function() {
  	mostrar_ocultar('num_computadores');
@@ -37,14 +36,26 @@
  	$('#ventilacion').hide();$('#num_computadores').hide();$('#proyector').hide();
  	$('#televisor').hide();$('#toma_corriente').hide();
  });
- function mostrar_ocultar(id) {
+ /*function mostrar_ocultar(id) {
  	var x = document.getElementById(id);
  	if (x.style.display === 'block') {
  		x.style.display = 'none';
  	} else {
  		x.style.display = 'block';
  	}
- }
+ }*/
+ function mostrar_ocultar(id){
+var elemento = document.getElementById(id);
+if(!elemento) {
+return true;
+}
+if (elemento.style.display == "none") {
+elemento.style.display = "block"
+} else {
+elemento.style.display = "none"
+};
+return true;
+};
  function select(){ 
  	var ter = document.getElementById("terminacion").selectedIndex ;
  	if (ter===0) {
@@ -55,25 +66,14 @@
  	}else{
  		$('#botones').show();
  		mostrar_ocultar('mostrar_ocultar');
+ 		//mostrarOcultar();
  	}
  }
  function capturaSelect(){
- 	var ter = document.getElementById("Terminacion").selectedIndex ;
- 	var textoTer = document.getElementById("Terminacion").options[ter].text ;
- 	alert("Terminacion:  "+textoTer);	
+ 	var ter = document.getElementById("terminacion").selectedIndex ;
+ 	var textoTer = document.getElementById("terminacion").options[ter].text ;
+ 	alert("terminacion:  "+textoTer);	
  }
- function modificaSelect(){
- 	var torr = document.getElementById("Torre").selectedIndex ;
- 	var niv = document.getElementById("Nivel").selectedIndex ;
- 	if (torr === 2 && niv===5 || torr === 2 && niv===6  ) {
- 		alert("no existe");
- 	}
- 	if (torr === 2 ) {
- 		var textoNiv = document.getElementById("Nivel").options[5].hide;
- 	}
- }
-
-
  window.addEventListener("load", function() {
  	cargarTorres(event);
 
