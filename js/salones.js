@@ -8,42 +8,39 @@
  $("#btnVentilacion").click(function() {
  	mostrar_ocultar('ventilacion');
  	$('#num_computadores').hide();$('#proyector').hide();$('#televisor').hide();
- 	$('#toma_corriente').hide();$('#tablero').hide();
+ 	$('#toma_corriente').hide();$('#tablero').hide();$('#silla').hide();
  	capturaSelect();
  });
  $("#btnNum_Computadores").click(function() {
  	mostrar_ocultar('num_computadores');
  	$('#ventilacion').hide();$('#proyector').hide();$('#televisor').hide();
- 	$('#toma_corriente').hide();$('#tablero').hide();
+ 	$('#toma_corriente').hide();$('#tablero').hide();$('#silla').hide();
  });
  $("#btnProyector").click(function() {
  	mostrar_ocultar('proyector');
  	$('#ventilacion').hide();$('#num_computadores').hide();$('#televisor').hide();
- 	$('#toma_corriente').hide();$('#tablero').hide();
+ 	$('#toma_corriente').hide();$('#tablero').hide();$('#silla').hide();
  });
  $("#btnTelevisor").click(function() {
  	mostrar_ocultar('televisor');
  	$('#ventilacion').hide();$('#num_computadores').hide();$('#proyector').hide();
- 	$('#toma_Corriente').hide();$('#tablero').hide();
+ 	$('#toma_Corriente').hide();$('#tablero').hide();$('#silla').hide();
  });
  $("#btnToma_Corriente").click(function() {
  	mostrar_ocultar('toma_corriente');
  	$('#ventilacion').hide();$('#num_computadores').hide();$('#proyector').hide();
- 	$('#televisor').hide();$('#tablero').hide();
+ 	$('#televisor').hide();$('#tablero').hide();$('#silla').hide();
  });
  $("#btnTablero").click(function() {
  	mostrar_ocultar('tablero');
  	$('#ventilacion').hide();$('#num_computadores').hide();$('#proyector').hide();
- 	$('#televisor').hide();$('#toma_corriente').hide();
+ 	$('#televisor').hide();$('#toma_corriente').hide();$('#silla').hide();
  });
- /*function mostrar_ocultar(id) {
- 	var x = document.getElementById(id);
- 	if (x.style.display === 'block') {
- 		x.style.display = 'none';
- 	} else {
- 		x.style.display = 'block';
- 	}
- }*/
+  $("#btnSilla").click(function() {
+ 	mostrar_ocultar('tablero');
+ 	$('#ventilacion').hide();$('#num_computadores').hide();$('#proyector').hide();
+ 	$('#televisor').hide();$('#toma_corriente').hide();$('#tablero').hide();
+ });
  function mostrar_ocultar(id){
 var elemento = document.getElementById(id);
 if(!elemento) {
@@ -63,6 +60,7 @@ return true;
  		$('#botones').hide();
  		$('#num_computadores').hide();$('#proyector').hide();$('#televisor').hide();
  		$('#toma_corriente').hide();$('#tablero').hide();$('#ventilacion').hide();
+ 		$('#silla').hide();
  	}else{
  		$('#botones').show();
  		mostrar_ocultar('mostrar_ocultar');
