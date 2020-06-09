@@ -44,14 +44,14 @@ websocket.onmessage = function (evt) {
 		$("#tablero").empty();
 		$("#silla").empty();
 
-		$("#ventilacion").append("Ventilacion: "+venti);
+		$("#ventilacion").append("Ventilacion: " + venti);
 		$("#num_computadores").empty();
-		$("#num_computadores").append("Numero de computadores en la sala: "+numpc);
-		$("#proyector").append("Proyector: "+proyec);
-		$("#televisor").append("Televisor: "+tv);
-		$("#toma_corriente").append("Numero de toma corrientes: "+toma);
-		$("#tablero").append("Tipo de tablero: "+tab);
-		$("#silla").append("Tipo de sillas en el salon: "+sillas);
+		$("#num_computadores").append("Numero de computadores: " + numpc);
+		$("#proyector").append("Proyector: " + proyec);
+		$("#televisor").append("Televisor: " + tv);
+		$("#toma_corriente").append("Numero de toma corrientes: " + toma);
+		$("#tablero").append("Tipo de tablero: " + tab);
+		$("#silla").append("Tipo de sillas en el salon: " + sillas);
 
 	} else if (obj.tipo === "horario") {
 		arreglo = obj.arreglo;
@@ -79,8 +79,8 @@ function getSalon() {
 }
 
 function crearMatriz() {
-	var horario = new Array(7)
-
+	var horario = new Array(8)
+	var titulos = new Array(6)
 	var clase79 = new Array(6)
 	var clase911 = new Array(6)
 	var clase111 = new Array(6)
@@ -139,22 +139,56 @@ function crearMatriz() {
 		}
 	}
 	console.log(clase810);
+	titulos[0] = "LUNES";
+	titulos[1] = "MARTES";
+	titulos[2] = "MIERCOLES";
+	titulos[3] = "JUEVES";
+	titulos[4] = "VIERNES";
+	titulos[5] = "SABADO";
 
+	
 
-
-	horario[0] = clase79;
-	horario[1] = clase911;
-	horario[2] = clase111;
-	horario[3] = clase24;
-	horario[4] = clase46;
-	horario[5] = clase68;
-	horario[6] = clase810;
+	horario[0] = titulos;
+	horario[1] = clase79;
+	horario[2] = clase911;
+	horario[3] = clase111;
+	horario[4] = clase24;
+	horario[5] = clase46;
+	horario[6] = clase68;
+	horario[7] = clase810;
 
 	console.log(horario)
 	$("#tabla").empty();
+	$("#tabla2").empty();
 	texto = "";
 	for (i = 0; i < horario.length; i++) {
 		texto += '<tr>';
+		if (i === 0) {
+			texto += '<td >  HORA </td>';
+		}
+		if (i === 1) {
+			texto += '<td> 7:00-9:00 </td>';
+		}
+		if (i === 2) {
+			texto += '<td> 9:00-11:00 </td>';
+		}
+		if (i === 3) {
+			texto += '<td> 11:00-1:00 </td>';
+		}
+		if (i === 4) {
+			texto += '<td> 2:00-4:00 </td>';
+		}
+		if (i === 5) {
+			texto += '<td> 4:00-6:00 </td>';
+		}
+		if (i === 6) {
+			texto += '<td> 6:00-8:00 </td>';
+		}
+		if (i === 7) {
+			texto += '<td> 8:00-10:00 </td>';
+		}
+
+
 
 		for (j = 0; j < horario[i].length; j++) {
 			if (horario[i][j] === undefined) {
@@ -163,12 +197,12 @@ function crearMatriz() {
 				texto += "<td>" + horario[i][j] + "</td>";
 			}
 		}
-		
+
 		texto += "</tr>";
 	}
 	texto += "</table>";
 	$("#tabla").append(texto);
-
+	$("#tabla2").append(texto);
 	clase79 = [];
 	clase911 = [];
 	clase111 = [];

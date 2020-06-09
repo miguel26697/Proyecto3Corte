@@ -13,6 +13,14 @@
 	height: 100%;
 	position: relative;
 }
+
+#inicio2{
+	background-color: #0000D3;
+	opacity: 100%;
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
 #texto{
 	font-family: 'PT Sans', sans-serif;
 	font-size: 50px;

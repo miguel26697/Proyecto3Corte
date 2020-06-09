@@ -1,4 +1,5 @@
 $('#botones').hide();
+$('#inicio2').hide();
 $("#btnBuscar").click(function () {
     getSalon();
     select();
@@ -42,6 +43,16 @@ $("#btnSilla").click(function () {
     $('#ventilacion').hide(); $('#num_computadores').hide(); $('#proyector').hide();
     $('#televisor').hide(); $('#toma_corriente').hide();$('#tablero').hide();
 });
+$("#btnReserva").click(function () {
+    mostrar_ocultar('inicio2');
+    $('#inicio').hide();
+    crearMatriz();
+});
+$("#btnVolver").click(function () {
+    mostrar_ocultar('inicio');
+    $('#inicio2').hide();
+});
+
 function mostrar_ocultar(id) {
     var elemento = document.getElementById(id);
     if (!elemento) {

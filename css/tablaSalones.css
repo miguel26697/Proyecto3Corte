@@ -3,8 +3,8 @@
 	border: 15px groove #6600cc; 
 	background-color: #E8E8FC; 
     padding: 15px ;
-    width: 50%; 
-    height: 330px ; 
+    width: 70%; 
+    height: 350px ; 
     margin-left: 50px;
 }
 #tablaSalones h1 { 
@@ -28,7 +28,8 @@
 	font-family: arial; 
 	font-size: 1.1em;
     padding: 5px 10px; 
-    color: #660066; }
+	color: #660066; 
+}
 #tablaSalones table caption { 
 	font-family: arial; 
 	font-size: 1.3em; 
@@ -49,7 +50,7 @@
 	color: white;
 	float: right;
 	margin-top: 18%;
-	margin-left: 60%;
+	margin-left: 75%;
 	position: absolute;
 }
 #ventilacion{
