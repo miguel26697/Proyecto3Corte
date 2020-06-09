@@ -1,20 +1,84 @@
+$('#botones').hide();
 $("#btnBuscar").click(function () {
     getSalon();
+    select();
 });
-
-
-
 $("#btnDevolverse").click(function () {
     window.location.assign("inicio.html");
 });
-
-function cargarTorres() {
-    var array = ["F", "B", "C", "D", "E"];
-    array.sort();
-    addOptions("torre", array);
+$("#btnVentilacion").click(function () {
+    mostrar_ocultar('ventilacion');
+    $('#num_computadores').hide(); $('#proyector').hide(); $('#televisor').hide();
+    $('#toma_corriente').hide(); $('#tablero').hide();$('#silla').hide();
+   
+});
+$("#btnNum_Computadores").click(function () {
+    mostrar_ocultar('num_computadores');
+    $('#ventilacion').hide(); $('#proyector').hide(); $('#televisor').hide();
+    $('#toma_corriente').hide(); $('#tablero').hide();$('#silla').hide();
+});
+$("#btnProyector").click(function () {
+    mostrar_ocultar('proyector');
+    $('#ventilacion').hide(); $('#num_computadores').hide(); $('#televisor').hide();
+    $('#toma_corriente').hide(); $('#tablero').hide();$('#silla').hide();
+});
+$("#btnTelevisor").click(function () {
+    mostrar_ocultar('televisor');
+    $('#ventilacion').hide(); $('#num_computadores').hide(); $('#proyector').hide();
+    $('#toma_Corriente').hide(); $('#tablero').hide();$('#silla').hide();
+});
+$("#btnToma_Corriente").click(function () {
+    mostrar_ocultar('toma_corriente');
+    $('#ventilacion').hide(); $('#num_computadores').hide(); $('#proyector').hide();
+    $('#televisor').hide(); $('#tablero').hide();$('#silla').hide();
+});
+$("#btnTablero").click(function () {
+    mostrar_ocultar('tablero');
+    $('#ventilacion').hide(); $('#num_computadores').hide(); $('#proyector').hide();
+    $('#televisor').hide(); $('#toma_corriente').hide();$('#silla').hide();
+});
+$("#btnSilla").click(function () {
+    mostrar_ocultar('silla');
+    $('#ventilacion').hide(); $('#num_computadores').hide(); $('#proyector').hide();
+    $('#televisor').hide(); $('#toma_corriente').hide();$('#tablero').hide();
+});
+function mostrar_ocultar(id) {
+    var elemento = document.getElementById(id);
+    if (!elemento) {
+        return true;
+    }
+    if (elemento.style.display == "none") {
+        elemento.style.display = "block"
+    } else {
+        elemento.style.display = "none"
+    };
+    return true;
+};
+function select() {
+    var ter = document.getElementById("terminacion").selectedIndex;
+    if (ter === 0) {
+        alert("Complete los campos");
+        $('#botones').hide();
+        $('#num_computadores').hide(); $('#proyector').hide(); $('#televisor').hide();
+        $('#toma_corriente').hide(); $('#tablero').hide(); $('#ventilacion').hide();$('#silla').hide();
+    } else {
+        $('#botones').show();
+        mostrar_ocultar('mostrar_ocultar');
+    }
 }
 
 
+
+window.addEventListener("load", function () {
+    cargarTorres(event);
+
+});
+function cargarTorres() {
+    var array = ["A", "B", "C", "D", "E", "F"];
+    array.sort();
+    addOptions("torre", array);
+
+}
 //Función para agregar opciones a un <select>.
 function addOptions(domElement, array) {
     var selector = document.getElementsByName(domElement)[0];
@@ -26,17 +90,15 @@ function addOptions(domElement, array) {
         selector.add(opcion);
     }
 }
-
-
-
 function cargarNiveles() {
     // Objeto de provincias con pueblos
     var listaNiveles = {
-        f: ["1", "2", "3", "4", "5", "6"],
-        b: ["Langreo", "Villaviciosa", "Oviedo", "Gijon", "Covadonga"],
-        c: ["Tui", "Cambados", "Redondella", "Porriño", "Ogrove"],
-        d: ["Dos Hermanas", "Écija", "Algeciras", "Marbella", "Sevilla"],
-        e: ["Caceres", "Badajoz", "Plasencia", "Zafra", "Merida"]
+        a: ["1", "2", "3", "4", "5"],
+        b: ["1", "2", "3", "4"],
+        c: ["1", "2", "3", "4", "5"],
+        d: ["1", "2", "3", "4", "5"],
+        e: ["1", "2", "3", "4", "5"],
+        f: ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
     }
 
     var torres = document.getElementById('torre')
@@ -59,6 +121,5 @@ function cargarNiveles() {
             niveles.add(opcion)
         });
     }
+
 }
-// Iniciar la carga de provincias solo para comprobar que funciona
-cargarTorres();

@@ -7,9 +7,8 @@ var arreglo;
 websocket.onopen = function (evt) {
 	var a = { tipo: "nuevo", user: getCookie("usuario"), hash: getCookie("hash") };
 	enviarMensaje(JSON.stringify(a));
-
 	let nuevoOption = 'Ausente';
-	$('#torre').append(`<option value="${nuevoOption}">${nuevoOption}</option>`);
+
 };
 
 websocket.onmessage = function (evt) {
@@ -37,6 +36,23 @@ websocket.onmessage = function (evt) {
 		sillas = obj.sil;
 		toma = obj.toma;
 		tab = obj.tab;
+
+		$("#ventilacion").empty();
+		$("#proyector").empty();
+		$("#televisor").empty();
+		$("#toma_corriente").empty();
+		$("#tablero").empty();
+		$("#silla").empty();
+
+		$("#ventilacion").append("Ventilacion: "+venti);
+		$("#num_computadores").empty();
+		$("#num_computadores").append("Numero de computadores en la sala: "+numpc);
+		$("#proyector").append("Proyector: "+proyec);
+		$("#televisor").append("Televisor: "+tv);
+		$("#toma_corriente").append("Numero de toma corrientes: "+toma);
+		$("#tablero").append("Tipo de tablero: "+tab);
+		$("#silla").append("Tipo de sillas en el salon: "+sillas);
+
 	} else if (obj.tipo === "horario") {
 		arreglo = obj.arreglo;
 		crearMatriz();
@@ -135,10 +151,11 @@ function crearMatriz() {
 	horario[6] = clase810;
 
 	console.log(horario)
+	$("#tabla").empty();
 	texto = "";
 	for (i = 0; i < horario.length; i++) {
 		texto += '<tr>';
-		texto += '<td> ';
+
 		for (j = 0; j < horario[i].length; j++) {
 			if (horario[i][j] === undefined) {
 				texto += "<td>" + "" + "</td>";
@@ -146,12 +163,11 @@ function crearMatriz() {
 				texto += "<td>" + horario[i][j] + "</td>";
 			}
 		}
-		texto += "</td>";
+		
 		texto += "</tr>";
 	}
 	texto += "</table>";
 	$("#tabla").append(texto);
-
 
 	clase79 = [];
 	clase911 = [];

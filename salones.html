@@ -6,7 +6,6 @@
 	<link rel="stylesheet" type="text/css" href="css/micss.css">
 	<link rel="stylesheet" type="text/css" href="css/SergioEstudia.css">
 	<link rel="stylesheet" type="text/css" href="css/inicio.css">
-	<link rel="stylesheet" type="text/css" href="css/photos.css">
 	<link rel="stylesheet" type="text/css" href="css/tablaSalones.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto:400|Lato:300,400">
 	<title>Salones</title>
@@ -15,38 +14,26 @@
 
 <body id="fondoInicio">
 	<div class="ui inverted massive navy fixed menu">
-		<div class="ui simple dropdown item">
-			Temas <i class="dropdown icon"></i>
-		</div>
-		<div class="ui simple dropdown item">
-			Contact <i class="dropdown icon"></i>
-		</div>
-		<div class="center menu">
-			<label class="item Titulo">Segio Estudia</label>
-		</div>
+		<label class="item Titulo">Sergio Estudia</label>
+		<button id="btnDevolverse" class="ui inverted black button">
+			<img class="logoUS" src="img/1.png">
+		</button>
 	</div>
 	<div id="inicio">
 		<div id="content" class="ui grid">
-			<div id="texto">
+			<div id="texto2">
 				<p>Bienvenido a SergioEstudia</p>
-				<div id="texto2">
-					<p>Encontraras un lugar de estudio para ti</p>
-				</div><br>
-
 				<form class="ui fluid form">
 					<div class="ui divider"></div>
 					<div class="inline field">
-
-
-						<select name="torre" id="torre" onchange="cargarNiveles();">
-							<option value="">Seleccione una torre...</option>
+						<select id="torre" name="torre" onchange="cargarNiveles();">
+							<option value="">Seleccione una torre
 						</select>
-						<select name="nivel" id="nivel">
-							<option value="">Seleccione un nivel...</option>
+						<select id="nivel" name="nivel">
+							<option value="">Seleccione un nivel
 						</select>
-
-						<select id="terminacion" name="Terminacion">
-							<option value="0">Terminacion</option>
+						<select id="terminacion" name="terminacion">
+							<option value="0">seleccione una terminacion</option>
 							<option value="01">01</option>
 							<option value="02">02</option>
 							<option value="03">03</option>
@@ -54,48 +41,73 @@
 							<option value="05">05</option>
 							<option value="06">06</option>
 						</select>
-						<div class="ui left pointing red basic label">
-							Por favor ingrese la terminacion del salon
-						</div>
 					</div>
 				</form>
-
-
-
-
-
 				<button>
 					<button id="btnBuscar" class="ui inverted black button">Buscar</button>
-				</button>
-
-				<div id="tablaSalones">
-
-					<h1>Horario del salon</h1>
-
-					<table id="tabla">
-						<caption>Salon </caption>
-						<tr>
-							<th>HORA</th>
-							<th>LUNES</th>
-							<th>MARTES</th>
-							<th>MIERCOLES</th>
-							<th>JUEVES</th>
-							<th>VIERNES</th>
-						</tr>
-						
-
-					</table>
-
+				</button><br>
+				<div id="botones" class="seven ui buttons">
+					<button id="btnVentilacion" class="ui inverted black button">Ventilación</button>
+					<button id="btnNum_Computadores" class="ui inverted black button">Cantidad de Computadores</button>
+					<button id="btnProyector" class="ui inverted black button">Proyector</button>
+					<button id="btnTelevisor" class="ui inverted black button">Televisor</button>
+					<button id="btnToma_Corriente" class="ui inverted black button">Toma Corriente</button>
+					<button id="btnTablero" class="ui inverted black button">Tablero</button>
+					<button id="btnSilla" class="ui inverted black button">Sillas</button>
+					</button>
 				</div>
-
-
-
-				<button id="btnDevolverse" class="ui inverted black button">Inicio
-					<br><i id="icono" class="reply icon"></i>
-				</button>
+			</div>
+			<div class="caracteristicas">
+				<div id="ventilacion">
+				
+				</div>
+				<div id="num_computadores">
+				</div>
+				<div id="proyector">
+				
+				</div>
+				<div id="televisor">
+			
+				</div>
+				<div id="toma_corriente">
+				
+				</div>
+				<div id="tablero">
+				
+				</div>
+				<div id="silla">
+				
+				</div>
+			</div>
+			<div id="tablaSalones">
+				<h1>Horario del salon</h1>
+				<table id=tabla>
+					<caption>Salon </caption>
+					<tr>
+						<th>HORA</th>
+						<th>LUNES</th>
+						<th>MARTES</th>
+						<th>MIERCOLES</th>
+						<th>JUEVES</th>
+						<th>VIERNES</th>
+					</tr>
+					<tr>
+						<td>7:00-9:00</td>
+					</tr>
+					<tr>
+					</tr>
+					<tr>
+					</tr>
+					<tr>
+					</tr>
+					<tr>
+					</tr>
+				</table>
 			</div>
 		</div>
+
 	</div>
+
 </body>
 <script type="text/javascript" src="js/semantic.min.js"></script>
 <script type="text/javascript" src="js/login.js"></script>

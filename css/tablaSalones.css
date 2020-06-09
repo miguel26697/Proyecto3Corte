@@ -1,22 +1,21 @@
 #tablaSalones { 
-	margin: 50px 70px; 
+	margin: 50px 30px; 
 	border: 15px groove #6600cc; 
 	background-color: #E8E8FC; 
     padding: 15px ;
-    width: 75%; 
-    height: 400px ; 
-    margin-left: 180px;
+    width: 50%; 
+    height: 330px ; 
+    margin-left: 50px;
 }
 #tablaSalones h1 { 
 	font-family: arial; 
-	font-size: 1em; 
+	font-size: 2.2em; 
 	text-align: center; 
 	color: #660033; 
 }
 #tablaSalones p { 
 	font-style: italic; 
 	font-family: tahoma; 
-	font-size: 1em; 
 }
 #tablaSalones table { 
 	border: 2px solid #660066; 
@@ -27,7 +26,7 @@
 #tablaSalones th, td { 
 	border: 1px solid #660066; 
 	font-family: arial; 
-	font-size: 1em;
+	font-size: 1.1em;
     padding: 5px 10px; 
     color: #660066; }
 #tablaSalones table caption { 
@@ -35,4 +34,42 @@
 	font-size: 1.3em; 
 	color: black; 
     padding-bottom: 10px;
+}
+.logoUS{
+	height: 35px;
+	width: 130px;
+}
+.caracteristicas{
+	font-family: 'PT Sans', sans-serif;
+	font-size: large;
+	font-style: normal;
+  	font-weight: 400;
+	text-align: left;
+	width: 20%;
+	color: white;
+	float: right;
+	margin-top: 18%;
+	margin-left: 60%;
+	position: absolute;
+}
+#ventilacion{
+	display: none;
+}
+#num_computadores{
+	display: none;
+}
+#proyector{
+	display: none;
+}
+#televisor{
+	display: none;
+}
+#toma_corriente{
+	display: none;
+}
+#tablero{
+	display: none;
+}
+#silla{
+	display: none;
 }
