@@ -14,7 +14,7 @@ function registropro() {
 function ingresopro() {
     correo = $("#correo").val();
     clave = $("#contra").val();
-    if (correo === "miguel" && clave === "123") {
+    if ((correo ==="jairo" && clave==="1234")||(correo === "miguel" && clave === "123")) {
         window.location.assign("inicio.html");
     }else{
         alert("usuario o contraseña incorrectos")
