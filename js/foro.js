@@ -43,6 +43,21 @@ function foroP(){
 	window.location.assign("foro_ciencias_p.html");
 }
 
+function foroCiencias(){
+	window.location.assign("foro_exactas.html");
+}
+
+function foroArte(){
+	window.location.assign("foro_artes.html");
+}
+
+function foroFilo(){
+	window.location.assign("foro_filosofia.html");
+}
+
+function foroEcono(){
+	window.location.assign("foro_economia.html");
+}
 	
 
 
