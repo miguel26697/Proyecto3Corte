@@ -79,8 +79,12 @@ websocket.onmessage = function (evt) {
 		var estado= obj.ven;
 
 		console.log(estado);
-
-
+		if(estado === "no registrado"){
+        alert("El salon ya esta reservado a esa hora");
+		}
+		if(estado === "dato reguistrado"){
+			alert("Reserva guardada correctamente");
+			}
 
 	}
 	
@@ -187,9 +191,11 @@ function reservar(){
 	console.log(fila);
 	console.log(horario[fila][colu]);
 	if(horario[fila][colu]===undefined){
-console.log("hola")
 		var mensa = { tipo: "reservar", horare: hora , diare:dia,te:tema,idsalon:salon};
 		enviarMensaje(JSON.stringify(mensa));
+
+	}else{
+		alert("El salon esta ocupado a esa hora con la clase "+ horario[fila][colu]);
 
 	}
 	
