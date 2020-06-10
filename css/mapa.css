@@ -1,0 +1,87 @@
+#mapa{
+	width: 500px;
+	height:500px;
+	margin-left: 400px;	
+	float: right;
+}
+.lugares{
+	font-family: 'PT Sans', sans-serif;
+	font-size: large;
+	font-style: normal;
+  	font-weight: 400;
+	text-align: left;
+	width: 20%;
+	color: white;
+	float: left;
+	margin-top: 5%;
+	margin-left: 5%;
+	position: absolute;
+
+}
+.descripcion{
+	font-family: 'PT Sans', sans-serif;
+	font-size: large;
+	font-style: normal;
+  	font-weight: 400;
+	text-align: left;
+	width: 20%;
+	color: white;
+	float: right;
+	margin-top: 5%;
+	margin-left: 70%;
+	position: absolute;
+}
+
+#textoMapa{
+	font-family: 'PT Sans', sans-serif;
+	font-size: xx-large;
+	font-style: normal;
+  	font-weight: 700;
+	text-align: center;
+	color: white;
+	margin-left: 30%;
+}
+#fondoMapa{
+	background-color: #0000D3;
+	opacity: 100%;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	margin-right: 0%;
+}
+#descripcion1{
+	display: none;
+}
+#descripcion2{
+	display: none;
+}
+#descripcion3{
+	display: none;
+}
+#descripcion4{
+	display: none;
+}
+#descripcion5{
+	display: none;
+}
+#descripcion6{
+	display: none;
+}
+#descripcion7{
+	display: none;
+}
+#descripcion8{
+	display: none;
+}
+#descripcion9{
+	display: none;
+}
+#descripcion10{
+	display: none;
+}
+#descripcion11{
+	display: none;
+}
+#descripcion12{
+	display: none;
+}
