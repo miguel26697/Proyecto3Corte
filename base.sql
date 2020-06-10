@@ -42,11 +42,9 @@ insert into salones values ("F203",10,"Salon","1");
 
 
 create table reserva(
-id_reserva varchar(10) primary key,
-correo varchar(100),
+id_reserva integer auto_increment primary key,
 id_salon varchar(20),
 foreign key (id_salon) references salones(id_salon),
-foreign key (correo) references usuario(correo),
 dia_reserva date,
 hora_resrva time,
 tema varchar(50)
@@ -61,7 +59,7 @@ clase varchar(30),
 foreign key (id_salon) references salones(id_salon)
 );
 
-drop table horario;
+
 
 insert into horario (dia,hora,id_salon,clase) values("1","1","F101","calculo");
 insert into horario (dia,hora,id_salon,clase)values("1","2","F101","lea");
@@ -78,16 +76,8 @@ insert into horario (dia,hora,id_salon,clase) values("4","4","F101","modelacion"
 insert into horario (dia,hora,id_salon,clase)values("6","1","F101","programacion");
 insert into horario (dia,hora,id_salon,clase)values("6","2","F101","ambiental");
 insert into horario (dia,hora,id_salon,clase) values("6","4","F101","modelacion");
-
-
 select * from horario;
-
-
-insert into horario values("miercoles","2:00-4:00","F101","sistemas 1");
-insert into horario values("miercoles","2:00-4:00","F101","sistemas 1");
-insert into horario values("jueves","2:00-4:00","F101","sistemas 1");
-insert into horario values("jueves","2:00-4:00","F101","sistemas 1");
-
-
 Select des.ventilacion,des.num_computadores,des.proyector ,des.televisor,des.sillas,des.toma_corriente,des.tablero from descripcion as des,salones as sa where sa.id_salon = "F101" and sa.id_descripcion=des.id_descripcion;
 select dia,hora,clase from horario where id_salon= "F101";
+insert into reserva values("0","f101","2020-10-10","11:00:00","calculo");
+select *from reserva;

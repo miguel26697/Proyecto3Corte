@@ -98,12 +98,23 @@
 				<form class="ui fluid form">
 					<div class="ui divider"></div>
 					<div class="inline field">
-						<select id="torre" name="torre" onchange="cargarNiveles();">
-							<option value="">Seleccione una hora 
+						<select id="hora1" name="hora">
+
+							<option value="07:00:00">07:00-09:00</option>
+							<option value="09:00:00">09:00-11:00</option>
+							<option value="11:00:00">11:00-13:00</option>
+							<option value="13:00:00">13:00-14:00</option>
+							<option value="14:00:00">14:00-16:00</option>
+							<option value="18:00:00">18:00-20:00</option>
+							<option value="20:00:00">20:00-22:00</option>
 						</select>
-						<select id="nivel" name="nivel">
-							<option value="">Seleccione el dia
-						</select>
+						
+							<input type="date" id="dia10" name="trip-start"
+							value="2020-06-10"
+							min="2020-06-01" max="2030-12-31">
+
+						<input type="text" id="tema10" >
+					
 	
 					</div>
 				</form>
@@ -113,7 +124,18 @@
 				</button><br>
 		
 			</div>
-		
+			<div class="caracteristicas">
+				<div id="diare">
+
+				</div>
+				<div id="horare">
+				</div>
+				<div id="tema">
+
+				</div>
+			
+				
+			</div>
 			<div id="tablaSalones">
 				<h1>Horario del salon</h1>
 				<table id="tabla2">
