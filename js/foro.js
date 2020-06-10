@@ -36,37 +36,20 @@ const foros = [
 	{ nombre: 'progremación' },
 ]
 
-function get_categoria() {
-	$.ajax({
-		type: 'GET',
-		url: url + "/Categories",
-		headers: {
-			usaHeaders: token
-		},
-		datType: "JSON",
-		success: function (rta) {
-			datos_categoria(rta);
-		}
-	})
+
+
+
+function foroP(){
+	window.location.assign("foro_ciencias_p.html");
 }
 
-function AddCategory(non, des, log) {
-	$("#target").empty();
-	token = getCookie("token");
-	$.ajax({
-		url: url + "/Category",
-		type: 'POST',
-		data: JSON.stringify({ "name": non, "description": des, "logo": log }),
-		headers: {
-			usaHeader: token
-		},
-		contenType: "JSON",
-		dataType: "JSON",
-		success: function (rta) {
-			console.log(rta);
-		}
-	});
-}
+	
+
+
+
+
+
+
 
 
 

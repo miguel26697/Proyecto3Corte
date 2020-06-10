@@ -13,5 +13,20 @@
 
 #foro2{
  float: left;
- margin-left: 15px;
+ margin-left: 13px;
+}
+
+#f2{
+    width: 290px; 
+    height: 172px;
+}
+
+#img2{
+    width: 290px;
+    height: 190px;
+}
+
+#img3{
+    width: 290px;
+    height: 190px;
 }
