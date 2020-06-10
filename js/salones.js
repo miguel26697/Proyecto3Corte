@@ -47,6 +47,11 @@ $("#btnReserva").click(function () {
     mostrar_ocultar('inicio2');
     $('#inicio').hide();
     crearMatriz();
+    reserva();
+});
+
+$("#btnReservar").click(function () {
+    reservar();
 });
 $("#btnVolver").click(function () {
     mostrar_ocultar('inicio');

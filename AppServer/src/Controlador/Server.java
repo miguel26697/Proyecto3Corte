@@ -20,6 +20,9 @@ public class Server extends WebSocketServer {
     ArrayList<String> dia = new ArrayList<String>();
     ArrayList<String> hora = new ArrayList<String>();
     ArrayList<String> clase = new ArrayList<String>();
+      ArrayList<String> diare = new ArrayList<String>();
+    ArrayList<String> horare = new ArrayList<String>();
+    ArrayList<String> tema = new ArrayList<String>();
 
     public Server() {
         super(new InetSocketAddress(30001));
@@ -55,6 +58,7 @@ public class Server extends WebSocketServer {
         String tipo = (String) obj.get("tipo");
         String object = "";
         String ven = "", num_compu = "", pro = "", tv = "", sil = "", to_co = "", tab = "";
+               String idsalon = "";
         switch (tipo) {
             case "ping":
                 message = "pong";
@@ -74,7 +78,7 @@ public class Server extends WebSocketServer {
 
             case "salon":
                 int cont = 0;
-                String idsalon = "";
+         
                 idsalon = (String) obj.getString("idsalon");
                 System.out.println("" + idsalon);
                 try {
@@ -144,7 +148,106 @@ public class Server extends WebSocketServer {
 
 
                 break;
+            case "reserva":
+                 idsalon = (String)obj.getString("idsalon");
+                try{
+                
+                    String clave = "select dia_reserva,hora_resrva,tema from reserva where id_salon='"+idsalon+"' ";
 
+               
+                    PreparedStatement ps;
+                    ResultSet rs;
+                    ps = con.conexion().prepareStatement(clave);
+      
+                    rs = ps.executeQuery();
+                    while(rs.next()){
+                       diare.add(rs.getString("dia_reserva"));
+                        horare.add(rs.getString("hora_resrva"));
+                        tema.add(rs.getString("tema"));
+                 
+                    }
+                 
+               
+                }catch(Exception x){
+                    System.out.println(""+x);
+                
+                }
+                
+                object = "{\"tipo\":\"reserva\",\"arreglo\":[";
+                for (int i = 0; i < diare.size(); i++) {
+                    object += "{\"colu\": \"" + diare.get(i) + "\",\"fila\":\"" + horare.get(i) + "\",\"tema\":\"" + tema.get(i) + "\"}";
+                    if (i < diare.size() - 1) {
+                        object += ",";
+                    }
+                }
+                object += "]}";
+                diare.clear();
+                horare.clear();
+                tema.clear();
+                for (int i = 0; i < clients.size(); i++) {
+                    WebSocket c = (WebSocket) clients.get(i).getConn();
+                    if (c == conn) {
+                        c.send(object);
+                    }
+                }
+                break;
+            case "reservar":
+              String diares = (String) obj.getString("diare");
+              String horares =(String) obj.getString("horare");
+              String temare=(String) obj.getString("te"); 
+              idsalon = (String)obj.getString("idsalon");
+              String registrado="";
+              int conta=0;
+              
+                System.out.println(""+diares);
+                System.out.println(""+horares);
+              
+                try{
+                String consul ="Select dia_reserva, hora_resrva from reserva where id_salon='"+idsalon+"'";
+                    PreparedStatement ps;
+                    ResultSet rs;
+                    ps = con.conexion().prepareStatement(consul);
+                    rs = ps.executeQuery();
+                 
+                    
+           
+                   while(rs.next()){
+                          String diaress=rs.getString("dia_reserva");
+                          String horaress=rs.getString("hora_resrva");
+                       
+                    if(diaress.equals(diares) && horaress.equals(horares)){
+                        System.out.println("hola");
+                        registrado="no registrado";
+                        conta=1;
+                    }
+                    }
+                 if(conta!=1){
+                    ps=con.conexion().prepareStatement("insert into reserva(id_salon,dia_reserva,hora_resrva,tema) values('"+idsalon+"','"+diares+"','"+horares+"','"+temare+"')");
+                    ps.executeUpdate();
+                    conta++;  
+                    System.out.println("dato guardado");
+                     registrado="dato reguistrado";
+                  
+                     }
+                
+                 
+                
+                
+                }catch(Exception x){
+                
+                    System.out.println(""+x.getMessage());
+                
+                }
+                
+                              object = "{\"tipo\":\"reservar\",\"ven\":\"" + registrado + "\"}";
+                for (int i = 0; i < clients.size(); i++) {
+                    WebSocket c = (WebSocket) clients.get(i).getConn();
+                    if (c == conn) {
+                        c.send(object);
+                    }
+                }
+                
+                break;
             default:
                 break;
         }

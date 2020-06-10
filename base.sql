@@ -42,11 +42,9 @@ insert into salones values ("F203",10,"Salon","1");
 
 
 create table reserva(
-id_reserva varchar(10) primary key,
-correo varchar(100),
+id_reserva integer auto_increment primary key,
 id_salon varchar(20),
 foreign key (id_salon) references salones(id_salon),
-foreign key (correo) references usuario(correo),
 dia_reserva date,
 hora_resrva time,
 tema varchar(50)
@@ -61,33 +59,59 @@ clase varchar(30),
 foreign key (id_salon) references salones(id_salon)
 );
 
-drop table horario;
 
-insert into horario (dia,hora,id_salon,clase) values("1","1","F101","calculo");
-insert into horario (dia,hora,id_salon,clase)values("1","2","F101","lea");
-insert into horario (dia,hora,id_salon,clase)values("1","5","F101","sistemas 1");
-insert into horario (dia,hora,id_salon,clase)values("2","1","F101","redes");
-insert into horario (dia,hora,id_salon,clase)values("2","2","F101","fisica");
-insert into horario (dia,hora,id_salon,clase) values("2","5","F101","dibujo");
-insert into horario (dia,hora,id_salon,clase)values("3","1","F101","redes6");
-insert into horario (dia,hora,id_salon,clase)values("3","2","F101","fisica4");
-insert into horario (dia,hora,id_salon,clase) values("3","4","F101","dibujo10");
-insert into horario (dia,hora,id_salon,clase)values("4","1","F101","programacion");
-insert into horario (dia,hora,id_salon,clase)values("4","2","F101","ambiental");
-insert into horario (dia,hora,id_salon,clase) values("4","4","F101","modelacion");
-insert into horario (dia,hora,id_salon,clase)values("6","1","F101","programacion");
-insert into horario (dia,hora,id_salon,clase)values("6","2","F101","ambiental");
-insert into horario (dia,hora,id_salon,clase) values("6","4","F101","modelacion");
+
+insert into horario (dia,hora,id_salon,clase) values("1","1","F201","calculo");
+insert into horario (dia,hora,id_salon,clase)values("1","2","F201","lea");
+insert into horario (dia,hora,id_salon,clase)values("1","5","F201","sistemas 1");
+insert into horario (dia,hora,id_salon,clase)values("2","1","F201","redes");
+insert into horario (dia,hora,id_salon,clase)values("2","2","F201","fisica");
+insert into horario (dia,hora,id_salon,clase) values("2","5","F201","dibujo");
+insert into horario (dia,hora,id_salon,clase)values("3","1","F201","redes6");
+insert into horario (dia,hora,id_salon,clase)values("3","2","F201","fisica4");
+insert into horario (dia,hora,id_salon,clase) values("3","4","F201","dibujo10");
+insert into horario (dia,hora,id_salon,clase)values("4","1","F201","programacion");
+insert into horario (dia,hora,id_salon,clase)values("4","2","F201","ambiental");
+insert into horario (dia,hora,id_salon,clase) values("4","4","F201","modelacion");
+insert into horario (dia,hora,id_salon,clase)values("6","1","F201","programacion");
+insert into horario (dia,hora,id_salon,clase)values("6","2","F201","ambiental");
+insert into horario (dia,hora,id_salon,clase) values("6","4","F201","modelacion");
+
+insert into horario (dia,hora,id_salon,clase) values("1","1","F202","calculo");
+insert into horario (dia,hora,id_salon,clase)values("1","2","F202","lea");
+insert into horario (dia,hora,id_salon,clase)values("2","1","F202","redes");
+insert into horario (dia,hora,id_salon,clase)values("2","2","F202","fisica");
+insert into horario (dia,hora,id_salon,clase) values("2","5","F202","dibujo");
+insert into horario (dia,hora,id_salon,clase)values("3","1","F202","redes6");
+insert into horario (dia,hora,id_salon,clase)values("3","2","F202","fisica4");
+insert into horario (dia,hora,id_salon,clase) values("3","4","F202","dibujo10");
+insert into horario (dia,hora,id_salon,clase)values("5","2","F202","ambiental");
+insert into horario (dia,hora,id_salon,clase) values("4","4","F202","modelacion");
+insert into horario (dia,hora,id_salon,clase)values("6","2","F202","ambiental");
+insert into horario (dia,hora,id_salon,clase) values("6","4","F202","modelacion");
+
+insert into horario (dia,hora,id_salon,clase) values("5","1","F203","calculo");
+insert into horario (dia,hora,id_salon,clase)values("1","2","F203","lea");
+insert into horario (dia,hora,id_salon,clase)values("6","5","F203","sistemas 1");
+insert into horario (dia,hora,id_salon,clase)values("2","1","F203","redes");
+insert into horario (dia,hora,id_salon,clase)values("2","2","F203","fisica");
+insert into horario (dia,hora,id_salon,clase) values("2","5","F203","dibujo");
+insert into horario (dia,hora,id_salon,clase)values("3","1","F203","redes6");
+insert into horario (dia,hora,id_salon,clase)values("3","2","F203","fisica4");
+insert into horario (dia,hora,id_salon,clase) values("3","4","F203","dibujo10");
+insert into horario (dia,hora,id_salon,clase)values("5","1","F203","programacion");
+insert into horario (dia,hora,id_salon,clase)values("5","2","F203","ambiental");
+insert into horario (dia,hora,id_salon,clase) values("4","4","F203","modelacion");
+insert into horario (dia,hora,id_salon,clase)values("6","1","F203","programacion");
+insert into horario (dia,hora,id_salon,clase)values("6","2","F203","ambiental");
+insert into horario (dia,hora,id_salon,clase) values("5","4","F203","modelacion");
+
+
+
 
 
 select * from horario;
-
-
-insert into horario values("miercoles","2:00-4:00","F101","sistemas 1");
-insert into horario values("miercoles","2:00-4:00","F101","sistemas 1");
-insert into horario values("jueves","2:00-4:00","F101","sistemas 1");
-insert into horario values("jueves","2:00-4:00","F101","sistemas 1");
-
-
 Select des.ventilacion,des.num_computadores,des.proyector ,des.televisor,des.sillas,des.toma_corriente,des.tablero from descripcion as des,salones as sa where sa.id_salon = "F101" and sa.id_descripcion=des.id_descripcion;
 select dia,hora,clase from horario where id_salon= "F101";
+insert into reserva values("0","f101","2020-10-10","11:00:00","calculo");
+select *from reserva;
