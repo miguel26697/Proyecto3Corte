@@ -48,10 +48,13 @@ $("#btnReserva").click(function () {
     $('#inicio').hide();
     crearMatriz();
     reserva();
+    limpiar();
 });
 
 $("#btnReservar").click(function () {
     reservar();
+    reserva();
+    limpiar();
 });
 $("#btnVolver").click(function () {
     mostrar_ocultar('inicio');
@@ -77,6 +80,7 @@ function select() {
         $('#botones').hide();
         $('#num_computadores').hide(); $('#proyector').hide(); $('#televisor').hide();
         $('#toma_corriente').hide(); $('#tablero').hide(); $('#ventilacion').hide();$('#silla').hide();
+        limpiar();
     } else {
         $('#botones').show();
         mostrar_ocultar('mostrar_ocultar');

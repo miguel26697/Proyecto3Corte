@@ -4,7 +4,7 @@
 	background-color: #E8E8FC; 
     padding: 15px ;
     width: 70%; 
-    height: 350px ; 
+    height: 450px ; 
     margin-left: 50px;
 }
 #tablaSalones h1 { 
@@ -49,7 +49,7 @@
 	width: 20%;
 	color: white;
 	float: right;
-	margin-top: 18%;
+	margin-top: 10%;
 	margin-left: 75%;
 	position: absolute;
 }
