@@ -1,0 +1,81 @@
+#fondoInicio{
+    background-image: url("f4.jpg"); 
+    opacity: 99%;
+    background-repeat: repeat;
+    background-position: center;
+    position: relative;
+    background-size: cover;
+}
+#texto4{
+	font-family: 'PT Sans', sans-serif;
+	font-size: medium;
+	font-size: 20px;
+	font-style: normal;
+  	font-weight: 500;
+	text-align: center;
+	width: 100%;
+	z-index: 999;
+	color: white;
+	margin-top: 3%;
+}
+#inicio22{
+	background-color: #0000D3;
+	opacity: 85%;
+	width: 100%;
+	height: 180%;
+	position: relative;
+}
+#tabla{ 
+	margin: 50px 30px; 
+	border: 15px groove #000080; 
+	background-color: #E1D8F1; 
+    padding: 15px ;
+    width: 80%; 
+    height: 330px ; 
+    margin-left: 50px;
+}
+#tabla th, td { 
+	border: 1px solid #000080; 
+	font-family: arial; 
+	font-size: 1.1em;
+    padding: 5px 10px; 
+    color: #000080; }
+#tabla table caption { 
+	font-family: arial; 
+	font-size: 1.3em; 
+	color: white; 
+    padding-bottom: 10px;
+}
+#coments{
+width: 60%;
+margin-left: 20%;
+}
+#coments h4{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 20px;
+	font-style: normal;
+  	font-weight: 50;
+	text-align: center;
+	width: 40%;
+	color: white;
+}
+#target{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 20px;
+	font-style: normal;
+  	font-weight: 50;
+	text-align: center;
+	width: 40%;
+	color: white;
+	z-index: 999;
+	background-color: #0000D3;
+}
+#coments p{
+	font-family: 'PT Sans', sans-serif;
+	font-size: 15px;
+	font-style: normal;
+  	font-weight: 50;
+	text-align: center;
+	width: 40%;
+	color: white;
+}

@@ -1,7 +1,7 @@
 #mapa{
 	width: 500px;
 	height:500px;
-	margin-left: 400px;	
+	margin-left: 460px;	
 	float: right;
 }
 .lugares{
@@ -27,7 +27,7 @@
 	width: 20%;
 	color: white;
 	float: right;
-	margin-top: 5%;
+	margin-top: 8%;
 	margin-left: 70%;
 	position: absolute;
 }
@@ -45,43 +45,112 @@
 	background-color: #0000D3;
 	opacity: 100%;
 	width: 100%;
-	height: 100%;
+	height: 130%;
 	position: absolute;
 	margin-right: 0%;
 }
 #descripcion1{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 #descripcion2{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 #descripcion3{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 #descripcion4{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 #descripcion5{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 #descripcion6{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 #descripcion7{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 #descripcion8{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 #descripcion9{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 #descripcion10{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 #descripcion11{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 #descripcion12{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
+
+.bubbly-button2{
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	display: inline-block;
+	font-size: 14px;
+	padding: 1em 2em;
+	margin-bottom: 5px;
+	-webkit-appearance: none;
+	appearance: none;
+	background-color:#000000cb ;
+	color: #ffffffd3;
+	border-radius: 4px;
+	border: none;
+	width:200px;
+	height:50px;
+	cursor: pointer;
+	position: relative;
+	transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+	box-shadow: 0 2px 25px rgba(45, 2, 238, 0.5);
+   }
+  

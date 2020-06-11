@@ -4,7 +4,7 @@
 	background-color: #E8E8FC; 
     padding: 15px ;
     width: 70%; 
-    height: 350px ; 
+    height: 450px ; 
     margin-left: 50px;
 }
 #tablaSalones h1 { 
@@ -49,28 +49,70 @@
 	width: 20%;
 	color: white;
 	float: right;
-	margin-top: 18%;
+	margin-top: 20%;
+	margin-left: 75%;
+	position: absolute;
+}
+.caracteristicas1{
+	font-family: 'PT Sans', sans-serif;
+	font-size: large;
+	font-style: normal;
+  	font-weight: 400;
+	text-align: left;
+	width: 20%;
+	color: white;
+	float: right;
+	margin-top: 10%;
 	margin-left: 75%;
 	position: absolute;
 }
 #ventilacion{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+	
 }
 #num_computadores{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 #proyector{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 #televisor{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 #toma_corriente{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 #tablero{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }
 #silla{
 	display: none;
+	text-align: justify;
+	line-height : 26px;
+	font-size: 14pt;
+	font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 }

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+ 
+ <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+ <link rel="stylesheet" type="text/css" href="css/micss.css">
+ <link rel="stylesheet" type="text/css" href="css/SergioEstudia.css">
+ <link rel="stylesheet" type="text/css" href="css/inicio.css">
+  <link rel="stylesheet" type="text/css" href="css/foros.css">
+ <link rel="stylesheet" type="text/css" href="css/tablaSalones.css">
+ <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto:400|Lato:300,400">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+ integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+ <title>Foro Economía</title>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/semantic.min.js"></script>
+<body id="fondoInicio" >
+  <div class="ui inverted massive navy fixed menu">
+    <label class="item Titulo">Sergio Estudia</label>
+    <button id="btnDevolverse" class="ui inverted black button">
+      <img class="logoUS" src="img/1.png">
+    </button>
+  </div>
+  <div id="inicio22">
+    <div id="content" class="ui grid">
+      <div id="texto4" >
+        <h1>Bienvenido al Foro de Economía</h1> 
+        <div id="preguntas">
+          <div class="container mt-5" id="pag1">
+            <input type="text " id="formulario" class="from-control my-140" placeholder="Preguntas">
+            <button class="ui inverted black button" id="boton">¨Preguntar</button>
+
+            <div id="resultado"> </div>
+          </div><br>
+
+          <div class="container">
+            <caption>Preguntas del Foro de Economía </caption>
+            <table class="table" id="tabla">
+
+              <thead>
+
+                <tr>
+                  <th>Preguntas</th>
+                  <th>ver</th>
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+        <footer>
+        <div id="coments">
+          <div id="pre">
+          </div>
+          <div class="ui comments" id="target"> </div>
+          <form class="ui form">
+            <h4 class="ui dividing header">Crear respuesta</h4>
+            <div id="coments" class="field">
+              <p>Name</p>
+              <div class="field">
+                <input type="text" name="shipping[first-name]" placeholder="Nombre" id="caja1" required>
+              </div>
+            </div>
+            <div id="coments" class="field">
+              <p>Comentario</p>
+              <div class="fields">
+                <textarea id="caja2" required></textarea>
+              </div>
+            </div>
+            <input type="button" value="Responder" class="ui inverted black button" placeholder="Comentario" id="btnl">
+          </form>
+          <button id="volver" class="ui inverted black button">volver</button>
+        </div>
+        </footer>
+      </div>
+    </div>  
+  </div>
+</div>    
+</body>
+<script type="text/javascript" src="js/semantic.min.js"></script>
+<script type="text/javascript" src="js/foroecono.js"></script>
+</html>
