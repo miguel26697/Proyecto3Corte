@@ -19,11 +19,11 @@ toma_corriente int,
 tablero varchar(20)
 );
 
-insert into descripcion values ("1","Natural",1,"si","no","individuales",4,"sencillo");
-insert into descripcion values ("2","Aire acondicionado",1,"si","no","individuales",4,"doble");
-insert into descripcion values ("3","Natural",1,"si","no","oficina",4,"sencillo");
-insert into descripcion values ("4","Aire acondicionado",1,"si","si","oficina",10,"sencillo");
-insert into descripcion values ("5","Aire acondicionado",1,"no","si","individuales",6,"sencillo");
+insert into descripcion values ("1","Natural",1,"Si","No","Individuales",4,"Sencillo");
+insert into descripcion values ("2","Aire acondicionado",1,"Si","No","Individuales",4,"Doble");
+insert into descripcion values ("3","Natural",1,"Si","No","Oficina",4,"Sencillo");
+insert into descripcion values ("4","Aire acondicionado",1,"Si","Si","oficina",10,"Sencillo");
+insert into descripcion values ("5","Aire acondicionado",1,"No","Si","Individuales",6,"sencillo");
 
 create table salones(
 id_salon varchar(20) primary key,
