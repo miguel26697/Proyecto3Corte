@@ -1,0 +1,52 @@
+#fondoInicio{
+    background-image: url("f4.jpg"); 
+    opacity: 99%;
+    background-repeat: repeat;
+    background-position: center;
+    position: relative;
+    background-size: cover;
+}
+
+#foro1{
+	float: left;
+    margin-left: 7%;
+    font-family: 'PT Sans', sans-serif;
+    font-size: xx-small;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    width: 290px; 
+    height: 500px;
+    border-color: red;
+   }
+
+#foro2{
+    float: left;
+    margin-left: 10%;
+    font-family: 'PT Sans', sans-serif;
+    font-size: xx-small;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    width: 290px; 
+    height: 500px;
+}
+#foro3{
+    float: left;
+    margin-left: 18%;
+    font-family: 'PT Sans', sans-serif;
+    font-size: xx-small;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    text-align: center;
+    width: 290px; 
+    height: 500px;
+}
+
+#f2{
+    width: 290px; 
+    height: 172px;
+}
