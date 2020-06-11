@@ -149,10 +149,6 @@ insert into horario (dia,hora,id_salon,clase)values("6","1","F203","programacion
 insert into horario (dia,hora,id_salon,clase)values("6","2","F203","ambiental");
 insert into horario (dia,hora,id_salon,clase) values("5","4","F203","modelacion");
 
-
-
-
-
 select * from horario;
 Select des.ventilacion,des.num_computadores,des.proyector ,des.televisor,des.sillas,des.toma_corriente,des.tablero from descripcion as des,salones as sa where sa.id_salon = "F101" and sa.id_descripcion=des.id_descripcion;
 select dia,hora,clase from horario where id_salon= "F101";
